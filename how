@@ -4,5 +4,6 @@ scripts/* -> $HOME/scripts/
 vim/* -> $HOME/
 discord/* -> (use beautifulDiscord; it's going to show you the path)
 i3/* -> $HOME/.config/i3/
+i3status/* -> $HOME/.config/i3status/
 picom/* -> $HOME/.config/picom/
 Xresources/* -> $HOME/
