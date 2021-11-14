@@ -1,2 +1,14 @@
 #!/bin/bash
-urxvt -T "terminal_popup" -g $(($(spotify-now -i "%artist: %title" | wc -c)+2))x1 -e /home/krzych/scripts/popup/sptf 
+
+# spawns an urxvt window and shows currently playing song
+# if you're not using thee whole rice, set your window manager's
+# settings to set all windows with "terminal_popup" title as 'floating'
+# of course - if you're using a floating WM (like sowm) you can skip that
+
+urxvt -T "terminal_popup" \
+	-g $((\
+		$(spotify-now -i "%artist: %title" | wc -c)+2\
+	))x1 \
+	-e "$HOME"/scripts/popup/sptf 
+#                 ~~~~~~~~~~~~~~~~~~~
+#             replace this with the path to 'sptf' script
