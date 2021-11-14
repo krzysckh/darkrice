@@ -17,6 +17,7 @@ yes, i'm really bad at choosing names
 - lemonbar (for popups)
 - spotify (not riced at all, but scripts for spotify popups are here)
 - spotify-now (for spotify popups)
+- clr (for colors in spotify popups)
 - CozetteVector font
 - figlet + 'speed' figlet font
 
