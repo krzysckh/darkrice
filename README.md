@@ -18,6 +18,7 @@ yes, i'm really bad at choosing names
 - spotify (not riced at all, but scripts for spotify popups are here)
 - spotify-now (for spotify popups)
 - CozetteVector font
+- figlet + 'speed' figlet font
 
 ## how?
 
