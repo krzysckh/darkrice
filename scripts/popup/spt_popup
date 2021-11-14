@@ -1,0 +1,2 @@
+#!/bin/bash
+urxvt -T "terminal_popup" -g $(($(spotify-now -i "%artist: %title" | wc -c)+2))x1 -e /home/krzych/scripts/popup/sptf 

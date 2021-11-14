@@ -1,0 +1,24 @@
+#!/bin/bash
+# krzysckh (c) - under wtfpl 2021
+
+vol=$(/home/krzych/scripts/popup/vol | sed 's/%//' | sed 's/on//' | sed 's/ //' | sed 's/.$//')
+
+(
+echo -ne "%{F$(cat /home/krzych/.cache/wal/onebyone/c16)}"
+printf " " && for i in $(seq $vol)
+do
+	printf "─"
+	if [[ $i -gt 8 ]]
+	then
+		echo -ne "%{F#870c21}"
+	fi
+done
+
+sleep 1
+) | lemonbar \
+	-g "110x30+20+20" \
+	-f "xft:DejaVu Sans Mono Nerd Font:pixelsize=15" \
+	-B "#ff$(cat /home/krzych/.cache/wal/onebyone/c1 | cut -c 2-)" \
+	-F "#ff$(cat /home/krzych/.cache/wal/onebyone/c16 | cut -c 2-)" \
+	-U "#ff$(cat /home/krzych/.cache/wal/onebyone/c16 | cut -c 2-)" \
+	-d

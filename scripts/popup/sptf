@@ -1,0 +1,5 @@
+#!/bin/bash
+tput civis
+clr -s "→ " $(cat /home/krzych/.cache/wal/onebyone/c15) -O | tr -d '\n'
+spotify-now -i "%artist: %title" | tr -d '\n'
+read -n 1 -s -r

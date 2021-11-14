@@ -1,0 +1,28 @@
+/* put your custom css here. */
+
+:root {
+	--font-primary: CozetteVector !important;
+	--background-primary: #222222 !important;
+	--background-teritary: #222222 !important;
+	--background-secondary-alt: #222222 !important;
+	--background-secondary: #222222 !important;
+	--background-mobile-primary: #222222 !important;
+	--channeltextarea-background: #222222 !important;
+	--deprecated-store-bg: #222222 !important;
+	--background-mobile-secondary: #504e4e !important;
+	/*--channeltextarea-background: #504e4e !important;*/
+	--background-floating: #504e4e !important;
+	--brand-experiment: #a451ee !important;
+	--interactive-normal: #dedede !important;
+	--interactive-hover: #33daf5 !important;
+	--interactive-active: #3be29c !important;
+	--channels-default: #dedede !important;
+	--text-normal: #dedede !important;
+	--text-muted: #504e4e !important;
+}
+
+* {
+	font-family: CozetteVector !important;
+	/*color: #dedede;*/
+}
+

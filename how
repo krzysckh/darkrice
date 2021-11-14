@@ -1,0 +1,8 @@
+bashrc/* -> $HOME/ (optional)
+inputrc/* -> $HOME/ (optional)
+scripts/* -> $HOME/scripts/
+vim/* -> $HOME/
+discord/* -> (use beautifulDiscord; it's going to show you the path)
+i3/* -> $HOME/.config/i3/
+picom/* -> $HOME/.config/picom/
+Xresources/* -> $HOME/

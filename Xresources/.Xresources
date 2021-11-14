@@ -1,0 +1,62 @@
+xterm*faceName:mono12:pixelsize=15
+xterm*maximized:false
+
+!URxvt*font:xft:DejaVu Sans Mono Nerd Font:pixelsize=18, xft: Symbola:pixelsize=18:minspace=False, xft: CozetteVecor:pixelsize=18
+!
+URxvt*font:xft:CozetteVector:pixelsize=18, xft:DejaVu Sans Mono Nerd Font:pixelsize=18, xft:Symbola:pixelsize=18:minspace=False
+
+URxvt*scrollBar: false
+
+URxvt*internalBorder: 20
+
+URxvt*iso14755: false
+URxvt*iso14755_52: false
+
+URxvt*perl-ext-common: resize-font
+
+!URxvt.keysym.Control-l: command:\033c
+
+*foreground:        #dedede
+*background:        #222222
+*.foreground:       #dedede
+*.background:       #222222
+URxvt*foreground:   #dedede
+URxvt*background:   [100]#222222
+URxvt*cursorColor:  #dedede
+URxvt*borderColor:  [100]#222222
+
+*.color0: #222222
+*color0:  #222222
+*.color1: #f04d4d
+*color1:  #f04d4d
+*.color2: #3be29c
+*color2:  #3be29c
+*.color3: #e4f614
+*color3:  #e4f614
+*.color4: #33daf5
+*color4:  #33daf5
+*.color5: #35daff
+*color5:  #35daff
+*.color6: #23ddff
+*color6:  #23ddff
+*.color7: #a451ee
+*color7:  #a451ee
+*.color8: #a555ee
+*color8:  #a555ee
+*.color9: #65d61c
+*color9:  #65d61c
+*.color10: #504e4e
+*color10:  #504e4e
+*.color11: #eeeeee
+*color11:  #eeeeee
+*.color12: #eeeeee
+*color12:  #eeeeee
+*.color13: #eeeeee
+*color13:  #eeeeee
+*.color14: #eeeeee
+*color14:  #eeeeee
+*.color15: #eeeeee
+*color15:  #eeeeee
+
+*.color66: #222222
+*color66:  #222222

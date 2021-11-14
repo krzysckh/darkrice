@@ -1,0 +1,9 @@
+#!/bin/bash
+
+(echo "  $@"; sleep 3) | lemonbar \
+	-g "200x30+20+20" \
+	-f "xft:DejaVu Sans Mono Nerd Font:pixelsize=15" \
+	-B "#ff$(cat /home/krzych/.cache/wal/onebyone/c1 | cut -c 2-)" \
+	-F "#ff$(cat /home/krzych/.cache/wal/onebyone/c16 | cut -c 2-)" \
+	-U "#ff$(cat /home/krzych/.cache/wal/onebyone/c16 | cut -c 2-)" \
+	-d \

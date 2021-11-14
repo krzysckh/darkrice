@@ -1,0 +1,2 @@
+#!/bin/bash
+urxvt -g 10x10 -T "terminal_popup" -e "echo" "-ne" "bruh moment" ";" "sleep" "2"
