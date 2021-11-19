@@ -1,0 +1,40 @@
+#222222
+#dedede
+#F04D4D
+#3BE29C
+#E4F614
+#33DAF5
+#A451EE
+#65D61C
+#504E4E
+
+
+
+
+
+bg: #222222
+fg: #dedede
+
+#F04D4D
+#3BE29C
+#E4F614
+#33DAF5
+#35daff
+#23ddff
+#A451EE
+#a555ee
+#65D61C
+#504E4E
+
+
+vim: 
+	bg: #222222
+	fg: #dedede
+
+	#F04D4D
+	#3BE29C
+	#E4F614
+	#33DAF5
+	#A451EE
+	#65D61C
+	#504E4E
