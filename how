@@ -1,4 +1,3 @@
-bashrc/* -> $HOME/ (optional)
 inputrc/* -> $HOME/ (optional)
 scripts/* -> $HOME/scripts/
 vim/* -> $HOME/
@@ -7,3 +6,5 @@ i3/* -> $HOME/.config/i3/
 i3status/* -> $HOME/.config/i3status/
 picom/* -> $HOME/.config/picom/
 Xresources/* -> $HOME/
+dunst/* -> $HOME/.config/dunst
+tmux/* -> $HOME
