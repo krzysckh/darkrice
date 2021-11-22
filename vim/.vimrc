@@ -19,6 +19,8 @@ set autowrite		" Automatically save before commands like :next and :make
 set hidden		" Hide buffers when they are abandoned
 set termguicolors
 
+au BufNewFile,BufRead *.xaml setf xml
+au BufNewFile,BufRead *.axaml setf xml
 
 
 let &t_SI = "\e[5 q"
@@ -105,8 +107,11 @@ let g:NERDCreateDefaultMappings = 1
 let g:w3m#homepage = "https://lite.duckduckgo.com/lite"
 
 " startify
-let g:startify_custom_header =
-	\ startify#pad(split(system('figlet -w $(tput cols) -c -f speed vim'), '\n'))
+let g:startify_custom_header = 
+			\ startify#center(split(system('figlet -w $(tput cols) -f speed vim'), '\n'))
+
+" the old solution ↓ stopped working for some reason lol
+" \ startify#pad(split(system('figlet -w $(tput cols) -c -f speed vim'), '\n'))
 
 let g:startify_lists = [
 			\ { 'type': 'files', 'header': ['recent'] },

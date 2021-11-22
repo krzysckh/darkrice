@@ -191,7 +191,7 @@ for_window [title="terminal_popup"] move absolute position 25 px 520 px
 
 # @ startup
 # exec "spotify"
-exec "firefox-esr"
+exec "firefox"
 exec "discord"
 #exec "wal -i /home/krzych/Tapety/tapeta.jpg"
 #exec "pywalfox start"
