@@ -74,31 +74,31 @@ call plug#begin('~/.vim/plugged')
 	Plug 'ajh17/vimcompletesme'
 call plug#end()
 
-map \f :FIGlet<CR>
+map <leader>f :FIGlet<CR>
 " figlets selected text
-map \new :tabnew<CR>
+map <leader>new :tabnew<CR>
 " creates new tab
-map \tree :NERDTreeToggle<CR>
+map <leader>tree :NERDTreeToggle<CR>
 " man...
-map \term :tabnew<CR>:term<CR><C-w>jZQ
+map <leader>term :tabnew<CR>:term<CR><C-w>jZQ
 " crates terminal in new window
-map \tterm :tabnew<CR>:Terminal bash<CR>
+map <leader>tterm :tabnew<CR>:Terminal bash<CR>
 " creates the other terminal in new window
-map \todo :tabnew<CR>:e ~/todo<CR>
+map <leader>todo :tabnew<CR>:e ~/todo<CR>
 " opens ~/todo in new tab
-map \w3m :tabnew<CR>:W3m<CR>
+map <leader>w3m :tabnew<CR>:W3m<CR>
 " opens w3m in new tab
-map \e :call Calc()<CR>
+map <leader>e :call Calc()<CR>
 " calculates equation in line
-map \json :%!python3 -m json.tool<CR>
+map <leader>json :%!python3 -m json.tool<CR>
 " beautifulies selected json
-map \\ :call halo#run({'shape':'line'})<CR>
+map <leader><leader> :call halo#run({'shape':'line'})<CR>
 " where is my cursor???
-map \start :Startify<CR>
+map <leader>start :Startify<CR>
 " startpage
-map \spt :call feedkeys(':SpSearch ' . input("gib search: "))<CR>
+map <leader>spt :call feedkeys(':SpSearch ' . input("gib search: "))<CR>
 " asks for query for spotify
-map \cal :Calendar<CR>
+map <leader>cal :Calendar<CR>
 " runs calendar
 
 let g:Hexokinase_highlighters = ['backgroundfull']

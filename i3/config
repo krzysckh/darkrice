@@ -114,7 +114,6 @@ for_window [class="Spotify"] move to workspace "muzyka"
 workspace "gadansko" output eDP-1
 workspace "internet" output HDMI-1
 workspace "muzyka" output HDMI-1
-workspace "gadansko v2" output HDMI-1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -185,7 +184,9 @@ client.background       #FFFFFF
 
 bindsym Print exec "sleep 0.2 ; scrot -s /home/krzych/ss/'sc%Y-%m-%d_%H%M%S-$wx$h.png' -q 100 -e 'xclip -selection clipboard -target image/png -i $f'"
 bindsym $mod+Shift+s exec "/home/krzych/scripts/popup/spt_popup"
+bindsym $mod+t exec "vimeverywhere -editor vim -term urxvt"
 
+for_window [title="vimeverywhere_pop"] floating enable
 for_window [title="terminal_popup"] floating enable
 for_window [title="terminal_popup"] move absolute position 25 px 520 px
 
