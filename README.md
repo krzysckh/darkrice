@@ -7,16 +7,19 @@ yes, i'm really bad at choosing names
 
 ## needed:
 
-- urxvt (patched)
-- i3wm
+- urxvt ([patched](https://aur.archlinux.org/packages/rxvt-unicode-truecolor-wide-glyphs/))
+- ~~i3wm~~
+- bspwm
+- sxhkd
+- bspwmbar
 - discord (+ beautifulDiscord)
 - [gwall](https://gist.github.com/krzysckh/938593f83fe482049877040b4faf15d0)
 - vim
 - vim-plug
 - picom
-- lemonbar (for popups)
-- spotify (not riced at all, but scripts for spotify popups are here)
-- spotify-now (for spotify popups)
+- spotify
+- spicetify
+- spotify-now (for spotify popups (will fix in te future))
 - clr (for colors in spotify popups)
 - dmenu
 - CozetteVector font

@@ -2,9 +2,12 @@ inputrc/* -> $HOME/ (optional)
 scripts/* -> $HOME/scripts/
 vim/* -> $HOME/
 discord/* -> (use beautifulDiscord; it's going to show you the path)
-i3/* -> $HOME/.config/i3/
-i3status/* -> $HOME/.config/i3status/
+bspwm/* -> $HOME/.config/bspwm/
+sxhkd/* -> $HOME/.config/sxhkd/
+spotify/* -> $HOME/.config/spicetify/
+bspwmbar/* ... git clone https://github.com/odknt/bspwmbar ; cd bspwmbar ; patch -R < /path/to/bspwmbar.diff ; ./configure ; make ; sudo make install
 picom/* -> $HOME/.config/picom/
 Xresources/* -> $HOME/
 dunst/* -> $HOME/.config/dunst
 tmux/* -> $HOME
+bashrc/* -> $HOME

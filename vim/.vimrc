@@ -1,6 +1,9 @@
 filetype plugin indent on
 " basic filetype thingies
 
+let mapleader = ","
+" easier leader
+
 syntax on
 " of course
 
@@ -68,16 +71,14 @@ call plug#begin('~/.vim/plugged')
 	Plug 'prabirshrestha/vim-lsp'
 	Plug 'prabirshrestha/asyncomplete.vim'
 	Plug 'prabirshrestha/asyncomplete-lsp.vim'
-
 	Plug 'mattn/vim-lsp-settings'
-
 	Plug 'ajh17/vimcompletesme'
+
+	Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 map <leader>f :FIGlet<CR>
 " figlets selected text
-map <leader>new :tabnew<CR>
-" creates new tab
 map <leader>tree :NERDTreeToggle<CR>
 " man...
 map <leader>term :tabnew<CR>:term<CR><C-w>jZQ
@@ -124,6 +125,8 @@ let g:spotify_token = readfile('/home/krzych/txt/spt_token')[0]
 "                               ~~~~~~~~~~~~~~~~~~~~~~~~~~
 "                             replace this with path to your spotify token
 "                             application
+
+let g:lsp_diagnostics_float_cursor = 1
 
 if executable('clangd')
 	augroup lsp_clangd

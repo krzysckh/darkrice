@@ -22,7 +22,7 @@
 }
 
 * {
-	font-family: CozetteVector !important;
+	font-family: CozetteVector, "Noto Color Emoji" !important;
 	/*color: #dedede;*/
 }
 
