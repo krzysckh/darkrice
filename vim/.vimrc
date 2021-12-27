@@ -21,10 +21,10 @@ set incsearch		" Incremental search
 set autowrite		" Automatically save before commands like :next and :make
 set hidden		" Hide buffers when they are abandoned
 set termguicolors
+set title
 
 au BufNewFile,BufRead *.xaml setf xml
 au BufNewFile,BufRead *.axaml setf xml
-
 
 let &t_SI = "\e[5 q"
 let &t_SR = "\e[4 q"
@@ -118,6 +118,8 @@ let g:startify_lists = [
 			\ { 'type': 'files', 'header': ['recent'] },
 			\ { 'type': 'dir', 'header': ['in '. getcwd()] }
 			\ ]
+"highlight StartifyHeader guifg=#f04d4d cterm=bold
+highlight StartifyHeader guifg=#dedede cterm=bold
 
 " spotify
 

@@ -4,7 +4,6 @@
 # krzysckh.org
 # krzysckh 2021
 
-
 export GCC_COLORS='error=01;31:warning=01;30:note=01;36:caret=01;32:locus=01:quote=01'
 # cc colored warnings etc
 
