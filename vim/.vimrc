@@ -1,3 +1,5 @@
+echo system('vimeverywhere_pop_float')
+
 filetype plugin indent on
 " basic filetype thingies
 

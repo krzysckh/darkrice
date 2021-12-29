@@ -9,6 +9,9 @@ XF86AudioMute
 # Change volume
 XF86Audio{Raise,Lower}Volume
 	pactl set-sink-volume @DEFAULT_SINK@ {+,-}10%
+
+super + v
+	vimeverywhere
  
 # run F3 if minecraft is open
 super + shift + i
