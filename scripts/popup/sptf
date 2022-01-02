@@ -8,6 +8,8 @@
 # - spotify-now
 # - spotify client
 
+[ ! -z "$(pgrep bspwm)" ] && bspc node -t floating
+
 tput civis
 clr -s "→ " "#a451ee" -O | tr -d '\n'
 spotify-now -i "%artist: %title" | tr -d '\n'

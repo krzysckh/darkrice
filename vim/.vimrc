@@ -38,28 +38,26 @@ call plug#begin('~/.vim/plugged')
 	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase'}
 	" html cololrs
 	Plug 'mhinz/vim-startify'
-	" start page (\start)
+	" start page (,start)
 	Plug 'preservim/nerdtree'
-	" file tree (\tree)
+	" file tree (,tree)
 	Plug 'ryanoasis/vim-devicons'
 	" icons
 	Plug 'preservim/nerdcommenter'
-	" autocomments (\c<Space>)
+	" autocomments (,c<Space>)
 	Plug 'fadein/vim-FIGlet'
-	" figlet fonts (\f)
+	" figlet fonts (,f)
 	Plug 'mhinz/vim-halo'
-	" where is my cursor?? (\\)
+	" where is my cursor?? (,,)
 	Plug 'krzysckh/turtel-vim'
 	Plug 'tc50cal/vim-terminal'
-	" vim terminal 2 (\\term)
+	" vim terminal 2 (,term)
 	Plug 'yuratomo/w3m.vim'
 	" web browser
 	Plug 'theniceboy/vim-calc'
-	" calculator (\e)
+	" calculator (,e)
 	Plug 'mattpenney89/vimify'
-	" spotify controls in vim (\spt)
-	Plug 'itchyny/calendar.vim'
-	" calendar (\cal)
+	" spotify controls in vim (,spt)
 	Plug 'ashisha/image.vim'
 	" showing images in vim
 	" if you want to use it with python3 instead of python
@@ -67,6 +65,8 @@ call plug#begin('~/.vim/plugged')
 	" to use list(range()) instead of xrange()
 	" and enable autocompletion for images in bash-completion
 	" in /usr/share/bash-completion/bash_completion
+	Plug 'wakatime/vim-wakatime'
+	" wakatime stats
 
 	" IDE features
 	Plug 'prabirshrestha/async.vim'
@@ -101,8 +101,6 @@ map <leader>start :Startify<CR>
 " startpage
 map <leader>spt :call feedkeys(':SpSearch ' . input("gib search: "))<CR>
 " asks for query for spotify
-map <leader>cal :Calendar<CR>
-" runs calendar
 
 let g:Hexokinase_highlighters = ['backgroundfull']
 let g:NERDCreateDefaultMappings = 1
