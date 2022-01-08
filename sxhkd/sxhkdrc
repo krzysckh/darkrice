@@ -12,6 +12,9 @@ XF86Audio{Raise,Lower}Volume
 
 super + v
 	vimeverywhere
+
+super + alt + s
+	/home/krzych/scripts/popup/spt_popup
  
 # run F3 if minecraft is open
 super + shift + i

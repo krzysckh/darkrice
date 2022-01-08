@@ -19,7 +19,7 @@ yes, i'm really bad at choosing names
 - picom
 - spotify
 - spicetify
-- spotify-now (for spotify popups (will fix in te future))
+- spotify-now (for spotify popups)
 - clr (for colors in spotify popups)
 - dmenu
 - CozetteVector font
