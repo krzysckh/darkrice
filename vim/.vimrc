@@ -54,8 +54,6 @@ call plug#begin('~/.vim/plugged')
 	" vim terminal 2 (,term)
 	Plug 'yuratomo/w3m.vim'
 	" web browser
-	Plug 'theniceboy/vim-calc'
-	" calculator (,e)
 	Plug 'mattpenney89/vimify'
 	" spotify controls in vim (,spt)
 	Plug 'ashisha/image.vim'
@@ -76,7 +74,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'mattn/vim-lsp-settings'
 	Plug 'ajh17/vimcompletesme'
 
-	Plug 'jiangmiao/auto-pairs'
+	"Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 map <leader>f :FIGlet<CR>
@@ -91,7 +89,7 @@ map <leader>todo :tabnew<CR>:e ~/todo<CR>
 " opens ~/todo in new tab
 map <leader>w3m :tabnew<CR>:W3m<CR>
 " opens w3m in new tab
-map <leader>e :call Calc()<CR>
+map <leader>e :%!bc<CR>
 " calculates equation in line
 map <leader>json :%!python3 -m json.tool<CR>
 " beautifulies selected json

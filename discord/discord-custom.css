@@ -30,15 +30,15 @@
 	/*color: #dedede;*/
 }
 
-.username-1A8OIy::before {
+.username-h_Y3Us::before {
 	content: "<" !important;
 }
 
-.username-1A8OIy::after {
+.username-h_Y3Us::after {
 	content: ">" !important;
 }
 
-.username-1A8OIy {
+.username-h_Y3Us{
 	font-weight: bold !important;
 }
 
