@@ -100,6 +100,8 @@ map <leader>start :Startify<CR>
 map <leader>spt :call feedkeys(':SpSearch ' . input("gib search: "))<CR>
 " asks for query for spotify
 
+command! -range=% Topdf :hardcopy > %.ps | !ps2pdf %.ps && rm %.ps && echo "=> %.pdf"
+
 let g:Hexokinase_highlighters = ['backgroundfull']
 let g:NERDCreateDefaultMappings = 1
 
