@@ -9,8 +9,8 @@ let mapleader = ","
 syntax on
 " of course
 
-so /home/krzych/scripts/despacito.vim
-"  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+so /home/krzych/res/despacito.vim
+"  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " change that to path to despacito.vim (if you're using that colorscheme)
 
 set relativenumber
@@ -118,7 +118,6 @@ let g:startify_lists = [
 			\ { 'type': 'files', 'header': ['recent'] },
 			\ { 'type': 'dir', 'header': ['in '. getcwd()] }
 			\ ]
-"highlight StartifyHeader guifg=#f04d4d cterm=bold
 highlight StartifyHeader guifg=#dedede cterm=bold
 
 " spotify

@@ -11,3 +11,4 @@ Xresources/* -> $HOME/
 dunst/* -> $HOME/.config/dunst
 tmux/* -> $HOME
 bashrc/* -> $HOME
+res/* -> $HOME/res
