@@ -26,6 +26,9 @@ super + Return
 super + w
 	firefox
 
+super + e
+	emoji
+
 super + d
 	dmenu_run -fn "CozetteVector:pixelsize=14" -nb "#222222" -nf "#dedede" -sb "#e4f614" -sf "#222222"
 

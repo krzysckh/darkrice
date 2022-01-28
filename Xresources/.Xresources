@@ -1,9 +1,8 @@
 xterm*faceName:mono12:pixelsize=15
 xterm*maximized:false
 
-!URxvt*font:xft:DejaVu Sans Mono Nerd Font:pixelsize=18, xft: Symbola:pixelsize=18:minspace=False, xft: CozetteVecor:pixelsize=18
-!
-URxvt*font:xft:CozetteVector:pixelsize=18, xft:DejaVu Sans Mono Nerd Font:pixelsize=18, xft:Symbola:pixelsize=18:minspace=False
+!URxvt*font:xft:CozetteVector:pixelsize=18, xft:DejaVu Sans Mono Nerd Font:pixelsize=18, xft:Symbola:pixelsize=18:minspace=False
+URxvt*font:xft:CozetteVector:pixelsize=18, xft:DejaVu Sans Mono Nerd Font:pixelsize=18, xft:Noto Color Emoji:pixelsize=18, xft:Symbola:pixelsize=18:minspace=False
 
 URxvt*scrollBar: false
 

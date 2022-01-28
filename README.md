@@ -8,6 +8,10 @@ yes, i'm really bad at choosing names
 ## needed:
 
 - urxvt ([patched](https://aur.archlinux.org/packages/rxvt-unicode-truecolor-wide-glyphs/))
+```sh
+yay -S libxft-bgra
+yay -S rxvt-unicode-wide-glyphs
+```
 - ~~i3wm~~
 - bspwm
 - sxhkd
