@@ -54,7 +54,7 @@ call plug#begin('~/.vim/plugged')
 	" vim terminal 2 (,term)
 	Plug 'yuratomo/w3m.vim'
 	" web browser
-	Plug 'mattpenney89/vimify'
+	" Plug 'mattpenney89/vimify'
 	" spotify controls in vim (,spt)
 	Plug 'ashisha/image.vim'
 	" showing images in vim
@@ -97,8 +97,10 @@ map <leader><leader> :call halo#run({'shape':'line'})<CR>
 " where is my cursor???
 map <leader>start :Startify<CR>
 " startpage
-map <leader>spt :call feedkeys(':SpSearch ' . input("gib search: "))<CR>
+
+" map <leader>spt :call feedkeys(':SpSearch ' . input("gib search: "))<CR>
 " asks for query for spotify
+" ain't using that anymore
 
 command! -range=% Topdf :hardcopy > %.ps | !ps2pdf %.ps && rm %.ps && echo "=> %.pdf"
 
@@ -122,25 +124,10 @@ highlight StartifyHeader guifg=#dedede cterm=bold
 
 " spotify
 
-let g:spotify_token = readfile('/home/krzych/txt/spt_token')[0]
+" let g:spotify_token = readfile('/home/krzych/txt/spt_token')[0]
 "                               ~~~~~~~~~~~~~~~~~~~~~~~~~~
 "                             replace this with path to your spotify token
 "                             application
 
 let g:lsp_diagnostics_float_cursor = 1
-
-if executable('clangd')
-	augroup lsp_clangd
-		autocmd!
-		autocmd User lsp_setup call lsp#register_server({
-					\ 'name': 'clangd',
-					\ 'cmd': {server_info->['clangd']},
-					\ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
-					\ })
-		autocmd FileType c setlocal omnifunc=lsp#complete
-		autocmd FileType cpp setlocal omnifunc=lsp#complete
-		autocmd FileType objc setlocal omnifunc=lsp#complete
-		autocmd FileType objcpp setlocal omnifunc=lsp#complete
-	augroup end
-endif
 
