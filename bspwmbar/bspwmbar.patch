@@ -1,0 +1,161 @@
+From 5d42ae7fd0bf4ad47be1f61f3bd2eeaa875c2bfb Mon Sep 17 00:00:00 2001
+From: krzysckh <krzysckh@wp.pl>
+Date: Wed, 22 Dec 2021 08:56:57 +0100
+Subject: [PATCH 1/2] paAtch
+
+---
+ config.h | 90 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ cpu.c    | 10 +++----
+ 2 files changed, 95 insertions(+), 5 deletions(-)
+ create mode 100644 config.h
+
+diff --git a/config.h b/config.h
+new file mode 100644
+index 0000000..16a7310
+--- /dev/null
++++ b/config.h
+@@ -0,0 +1,90 @@
++/* See LICENSE file for copyright and license details. */
++
++#ifndef BSPWMBAR_CONFIG_H_
++#define BSPWMBAR_CONFIG_H_
++
++#include "bspwmbar.h"
++
++/* intel */
++#define THERMAL_PATH "/sys/class/thermal/thermal_zone0/temp"
++/* k10temp */
++/* #define THERMAL_PATH "/sys/class/hwmon/hwmon1/temp1_input" */
++
++/* max length of monitor output name and bspwm desktop name */
++#define NAME_MAXSZ  32
++/* max length of active window title */
++#define TITLE_MAXSZ 50
++/* set window height */
++#define BAR_HEIGHT  24
++
++/* set font pattern for find fonts, see fonts-conf(5) */
++const char *fontname = "CozetteVector:size=9";
++
++/*
++ * color settings by index of color map
++ */
++/* bspwmbar fg color */
++#define FGCOLOR    "#dedede"
++/* bspwmbar bg color */
++#define BGCOLOR    "#222222"
++/* inactive fg color */
++#define ALTFGCOLOR "#e4f614"
++/* graph bg color */
++#define ALTBGCOLOR "#504e4e"
++
++/*
++ * Module definition
++ */
++
++/* modules on the left */
++module_t left_modules[] = {
++	{ /* bspwm desktop state */
++		.desk = {
++			.func = desktops,
++			.focused = "",
++			.unfocused = "",
++			.fg_free = ALTFGCOLOR,
++		},
++	},
++	{ /* active window title */
++		.title = {
++			.func = windowtitle,
++			.maxlen   = TITLE_MAXSZ,
++			.ellipsis = "...",
++		},
++	},
++};
++
++/* modules on the right */
++module_t right_modules[] = {
++	{ /* system tray */
++		.tray = {
++			.func = systray,
++			.iconsize = 16,
++		},
++	},
++	{ /* cpu usage */
++		.cpu = {
++			.func = cpugraph,
++			.prefix = "cpu: "
++		},
++	},
++	{ /* master playback volume */
++		.vol = {
++			.func = volume,
++			.handler = volume_ev,
++			.suffix = "%",
++			.muted = "婢",
++			.unmuted = "墳",
++		},
++	},
++	{ /* clock */
++		.date = {
++			.func = datetime,
++			.prefix = " ",
++			.format = "%a, %d %B %Y %H:%M",
++		},
++	},
++};
++
++#endif
+diff --git a/cpu.c b/cpu.c
+index 62ccb57..78cb0cd 100644
+--- a/cpu.c
++++ b/cpu.c
+@@ -41,10 +41,10 @@ static int num_procs();
+ static int cpu_perc(double **);
+ 
+ static const char *deffgcols[4] = {
+-	"#449f3d", /* success color */
+-	"#2f8419", /* normal color */
+-	"#f5a70a", /* warning color */
+-	"#ed5456", /* critical color */
++	"#65d61c", /* success color */
++	"#3be29c", /* normal color */
++	"#e4f614", /* warning color */
++	"#f04d4d", /* critical color */
+ };
+ static double *loadavgs = NULL;
+ 
+@@ -154,7 +154,7 @@ cpugraph(draw_context_t *dc, module_option_t *opts)
+ 	double *vals = NULL;
+ 	int i, ncore = cpu_perc(&vals);
+ 
+-	bgcol = color_load("#555555");
++	bgcol = color_load("#504e4e");
+ 	for (i = 0; i < 4; i++) {
+ 		if (opts->cpu.cols[i])
+ 			fgcols[i] = color_load(opts->cpu.cols[i]);
+-- 
+2.35.1
+
+
+From 960fa23a91bf9c55b90862dce4005851207ea572 Mon Sep 17 00:00:00 2001
+From: krzysckh <krzysckh@wp.pl>
+Date: Sat, 5 Feb 2022 14:54:54 +0100
+Subject: [PATCH 2/2] well
+
+---
+ .gitignore | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/.gitignore b/.gitignore
+index e2e3f0b..1e77b20 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,5 +1,4 @@
+ *.o
+ Makefile
+ compile_commands.json
+-config.h
+ bspwmbar
+-- 
+2.35.1
+
