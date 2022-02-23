@@ -24,9 +24,13 @@ set autowrite		" Automatically save before commands like :next and :make
 set hidden		" Hide buffers when they are abandoned
 set termguicolors
 set title
+set signcolumn=yes
+set wildmenu
 
 au BufNewFile,BufRead *.xaml setf xml
 au BufNewFile,BufRead *.axaml setf xml
+
+au BufNewFile,BufRead *.nelua setf lua
 
 let &t_SI = "\e[5 q"
 let &t_SR = "\e[4 q"
@@ -36,7 +40,7 @@ let &t_EI = "\e[2 q"
 
 call plug#begin('~/.vim/plugged')
 	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase'}
-	" html cololrs
+	" html colors
 	Plug 'mhinz/vim-startify'
 	" start page (,start)
 	Plug 'preservim/nerdtree'
@@ -65,6 +69,8 @@ call plug#begin('~/.vim/plugged')
 	" in /usr/share/bash-completion/bash_completion
 	Plug 'wakatime/vim-wakatime'
 	" wakatime stats
+	" Plug 'vimsence/vimsence'
+	" discord rich presence
 
 	" IDE features
 	Plug 'prabirshrestha/async.vim'
@@ -72,7 +78,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'prabirshrestha/asyncomplete.vim'
 	Plug 'prabirshrestha/asyncomplete-lsp.vim'
 	Plug 'mattn/vim-lsp-settings'
-	Plug 'ajh17/vimcompletesme'
+	"Plug 'ajh17/vimcompletesme'
 
 	"Plug 'jiangmiao/auto-pairs'
 call plug#end()
@@ -130,4 +136,3 @@ highlight StartifyHeader guifg=#dedede cterm=bold
 "                             application
 
 let g:lsp_diagnostics_float_cursor = 1
-

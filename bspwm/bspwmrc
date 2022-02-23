@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH=$PATH:/home/krzych/bin/
+export PATH=$PATH:/home/krzych/bin/:/home/krzych/.local/bin/
 
 BSPWM_CONF_DIR="$HOME/.config/bspwm"
 PICOM_CONFIG="$HOME/.config/picom/picom.conf"
