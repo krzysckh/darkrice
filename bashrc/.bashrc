@@ -47,3 +47,5 @@ export GROFF_NO_SGR=1
 
 export HISTSIZE=
 export HISTFILESIZE=
+
+export MDCAT_PAGER="less -R"

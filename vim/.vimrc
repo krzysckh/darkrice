@@ -26,6 +26,7 @@ set termguicolors
 set title
 set signcolumn=yes
 set wildmenu
+set backspace=indent,eol,start
 
 au BufNewFile,BufRead *.xaml setf xml
 au BufNewFile,BufRead *.axaml setf xml
@@ -69,8 +70,10 @@ call plug#begin('~/.vim/plugged')
 	" in /usr/share/bash-completion/bash_completion
 	Plug 'wakatime/vim-wakatime'
 	" wakatime stats
-	" Plug 'vimsence/vimsence'
+	"Plug 'vimsence/vimsence'
 	" discord rich presence
+	" Plug 'editorconfig/editorconfig-vim'
+	" .editorconfig
 
 	" IDE features
 	Plug 'prabirshrestha/async.vim'
@@ -87,7 +90,7 @@ map <leader>f :FIGlet<CR>
 " figlets selected text
 map <leader>tree :NERDTreeToggle<CR>
 " man...
-map <leader>term :tabnew<CR>:term<CR><C-w>jZQ
+" map <leader>term :tabnew<CR>:term<CR><C-w>jZQ
 " crates terminal in new window
 map <leader>tterm :tabnew<CR>:Terminal bash<CR>
 " creates the other terminal in new window
