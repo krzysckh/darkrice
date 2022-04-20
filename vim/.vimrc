@@ -13,6 +13,13 @@ so /home/krzych/res/despacito.vim
 "  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " change that to path to despacito.vim (if you're using that colorscheme)
 
+function Set_tab_to_spaces()
+	set expandtab
+	set tabstop=2
+	set softtabstop=2
+	set shiftwidth=2
+endfunction
+
 set relativenumber
 set showcmd
 set mouse=a
@@ -32,6 +39,10 @@ au BufNewFile,BufRead *.xaml setf xml
 au BufNewFile,BufRead *.axaml setf xml
 
 au BufNewFile,BufRead *.nelua setf lua
+
+
+
+au BufNewFile,BufRead *.y call Set_tab_to_spaces()
 
 let &t_SI = "\e[5 q"
 let &t_SR = "\e[4 q"

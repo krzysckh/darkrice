@@ -53,6 +53,5 @@ xbanish &
 
 # status_inf | lemonbar -f"CozetteVector:pixelsize=13, Noto Color Emoji:pixelsize=13, symbola:pixelsize=13" -B"#222222" -p
 
-
 bspwmbar &
 
