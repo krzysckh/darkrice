@@ -40,6 +40,7 @@ maybe i forgot to put something in this repo. if you get lost or something, plea
 
 [great sources](https://www.tumfatig.net/2019/customizing-openbsd-xenodm/)
 for configuring xdm
+
 ----
 
 under MIT license
