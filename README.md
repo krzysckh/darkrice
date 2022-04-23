@@ -37,6 +37,9 @@ please follow the 'how' file
 
 maybe i forgot to put something in this repo. if you get lost or something, please create an issue, or mail me on \<krzysckh@wp.pl\>
 
+
+[great sources](https://www.tumfatig.net/2019/customizing-openbsd-xenodm/)
+for configuring xdm
 ----
 
 under MIT license
