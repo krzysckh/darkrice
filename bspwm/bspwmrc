@@ -1,10 +1,7 @@
 #!/bin/bash
 
-export PATH=$PATH:/home/krzych/bin/:/home/krzych/.local/bin/
 
 BSPWM_CONF_DIR="$HOME/.config/bspwm"
-PICOM_CONFIG="$HOME/.config/picom/picom.conf"
-
 #=====================================#
 
 pgrep -x sxhkd > /dev/null || sxhkd &
@@ -16,8 +13,6 @@ bspc config border_width         2
 bspc config window_gap          15
 
 bspc config split_ratio          0.52
-#bspc config borderless_monocle   true
-#bspc config gapless_monocle      true
 
 bspc config focus_follows_pointer true
 
@@ -30,20 +25,7 @@ bspc rule -a mpv state=pseudo_tiled
 bspc rule -a Sxiv state=pseudo_tiled
 bspc rule -a Screenkey manage=off
 
-xsetroot -cursor_name left_ptr
-
-setxkbmap pl
-
-dunst &
-
-xrdb ~/.Xresources
-
-gwall "#222" "#111" 5
-
-pidof picom && killall -9 picom
-picom --config "$PICOM_CONFIG" -b
-
-xbanish &
+bspwmbar &
 
 #pulseaudio -D
 
@@ -53,5 +35,4 @@ xbanish &
 
 # status_inf | lemonbar -f"CozetteVector:pixelsize=13, Noto Color Emoji:pixelsize=13, symbola:pixelsize=13" -B"#222222" -p
 
-bspwmbar &
 

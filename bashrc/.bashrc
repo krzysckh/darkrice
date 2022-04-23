@@ -35,6 +35,9 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 
+#alias rm='rm -i'
+# paranoia
+
 # thank fuck archwiki
 export LESS_TERMCAP_mb=$'\e[1;31m'
 export LESS_TERMCAP_md=$'\e[1;33m'

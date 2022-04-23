@@ -12,3 +12,5 @@ dunst/* -> $HOME/.config/dunst
 tmux/* -> $HOME
 bashrc/* -> $HOME
 res/* -> $HOME/res
+xdm/* -> /etc/X11/xdm
+xsession/* -> $HOME

@@ -1,0 +1,83 @@
+!Xcursor.theme: whiteglass
+
+xlogin*login.translations: #override \
+	Ctrl<Key>R: abort-display()\n\
+	<Key>F1: set-session-argument(failsafe) finish-field()\n\
+	<Key>Delete: delete-character()\n\
+	<Key>Left: move-backward-character()\n\
+	<Key>Right: move-forward-character()\n\
+	<Key>Home: move-to-begining()\n\
+	<Key>End: move-to-end()\n\
+	Ctrl<Key>KP_Enter: set-session-argument(failsafe) finish-field()\n\
+	<Key>KP_Enter: set-session-argument() finish-field()\n\
+	Ctrl<Key>Return: set-session-argument(failsafe) finish-field()\n\
+	<Key>Return: set-session-argument() finish-field()
+
+xlogin.Login.background: #222222
+xlogin.Login.foreground: #dedede
+xlogin.Login.greetColor: #dedede
+xlogin.Login.inpColor: #222222
+xlogin.Login.promtColor: #222222
+xlogin.Login.hiColor: #dedede
+xlogin.Login.shdColor: #dedede
+
+xlogin*shdColor: #222222
+xlogin*hiColor: #504e4e
+xlogin*background: #222222
+xlogin*foreground: #dedede
+xlogin*greetColor: #3be29c
+xlogin*failColor: #f04d4d
+*Foreground: #dedede
+*Background: #222222
+
+xlogin*useShape: true
+xlogin*logoPadding: 10
+xlogin*greeting: CLIENTHOST
+xlogin*borderWidth: 0
+
+xlogin.Login.face: CozetteVector
+xlogin.Login.failFace: CozetteVector
+xlogin.Login.greetFace: CozetteVector
+xlogin.Login.promptFace: CozetteVector
+
+xlogin.Login.logoFileName: /usr/share/pixmaps/arch.xpm
+xlogin.Login.logoPadding: 8
+
+xlogin.Login.namePrompt: login
+xlogin.Login.passwdPrompt: password
+xlogin.Login.fail: lmao no
+xlogin.Login.echoPasswd: false
+
+xlogin.Login.Height: 300
+xlogin.Login.Width: 500
+xlogin.Login.x: 90
+xlogin.Login.y: 300
+xlogin.login.frameWidth: 0
+xlogin.login.innerFramesWidth: 1
+xlogin.login.sepWidth: 0
+
+! xclock !
+!xclock.face: CozetteVector
+!xclock.dateFace: CozetteVector
+! set in Xsetup_0
+xclock.dateGeom: +780+320
+xclock.background: #222222
+xclock.foreground: #dedede
+xclock.borderWidth: 0
+xclock.Clock.analog: false
+xclock.Clock.chime: false
+xclock.Clock.render: true
+xclock.Clock.twentyfour: true
+xclock.Clock.update: 10
+
+! xmessage !
+xmessage*background: #222222
+xmessage*foreground: #dedede
+xmessage*borderWidth: 0
+xmessage*face: CozetteVector
+xmessage*scrollHorizontal: Never
+xmessage*scrollVertical: Never
+xmessage*timeout: 0
+
+
+

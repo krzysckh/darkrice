@@ -1,0 +1,29 @@
+#!/bin/sh
+#xconsole -geometry 480x130-0-0 -daemon -notify -verbose -fn fixed -exitOnFail
+
+hsetroot -solid "#222222"
+
+OS_NAME=$(uname -n)
+OS_INFO=$(uname -smr)
+
+xclock -geometry -0+0 -face CozetteVector \
+  -strftime "$OS_NAME ($OS_INFO) | %a. %d %b. %Y  %H:%M " &
+
+echo bspwm > /tmp/_RUN_WM
+
+(
+xmessage -geometry +838-32 \
+	-buttons "[ bspwm ]":20,"[ cwm ]":21,"[ dwm ]":22 ""
+_act=$?
+case $_act in
+	20)
+		echo bspwm > /tmp/_RUN_WM
+		;;
+	21)
+		echo cwm > /tmp/_RUN_WM
+		;;
+	22)
+		echo dwm > /tmp/_RUN_WM
+		;;
+esac
+) &
