@@ -14,3 +14,4 @@ bashrc/* -> $HOME
 res/* -> $HOME/res
 xdm/* -> /etc/X11/xdm
 xsession/* -> $HOME
+arch.xpm -> /usr/share/pixmaps/
