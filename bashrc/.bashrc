@@ -52,3 +52,4 @@ export HISTSIZE=
 export HISTFILESIZE=
 
 export MDCAT_PAGER="less -R"
+

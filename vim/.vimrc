@@ -15,36 +15,44 @@ so /home/krzych/res/despacito.vim
 "  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " change that to path to despacito.vim (if you're using that colorscheme)
 
-function Set_tab_to_spaces()
+function Set_spaces()
 	set expandtab
 	set tabstop=2
 	set softtabstop=2
 	set shiftwidth=2
 endfunction
 
+
+autocmd Filetype c call Set_spaces()
+autocmd Filetype cpp call Set_spaces()
+
 set relativenumber
 set showcmd
 set mouse=a
-set showmatch		" Show matching brackets.
-set ignorecase		" Do case insensitive matching
-set smartcase		" Do smart case matching
-set incsearch		" Incremental search
-set autowrite		" Automatically save before commands like :next and :make
-set hidden		" Hide buffers when they are abandoned
+set showmatch
+set ignorecase
+set smartcase
+set incsearch
+set autowrite
+set hidden
 set termguicolors
 set title
+set ttyfast
 set signcolumn=yes
 set wildmenu
 set backspace=indent,eol,start
+
+set noexpandtab
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
 
 au BufNewFile,BufRead *.xaml setf xml
 au BufNewFile,BufRead *.axaml setf xml
 
 au BufNewFile,BufRead *.nelua setf lua
 
-
-
-au BufNewFile,BufRead *.y call Set_tab_to_spaces()
+"au BufNewFile,BufRead *.y call Set_tab_to_spaces()
 
 let &t_SI = "\e[5 q"
 let &t_SR = "\e[4 q"
@@ -87,6 +95,8 @@ call plug#begin('~/.vim/plugged')
 	" discord rich presence
 	" Plug 'editorconfig/editorconfig-vim'
 	" .editorconfig
+	Plug 'vim-utils/vim-man'
+	" man pages lol
 
 	" IDE features
 	Plug 'prabirshrestha/async.vim'

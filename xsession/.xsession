@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH=$PATH:/home/krzych/bin/:/home/krzych/.local/bin/
+export PATH=$PATH:/home/krzych/bin:/home/krzych/.local/bin
 
 xrdb ~/.Xresources
 
