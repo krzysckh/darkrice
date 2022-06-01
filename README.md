@@ -4,7 +4,6 @@ yes, i'm really bad at choosing names
 
 ![img](https://raw.githubusercontent.com/krzysckh/darkrice/master/what.png)
 
-
 ## needed:
 
 - urxvt ([patched](https://aur.archlinux.org/packages/rxvt-unicode-truecolor-wide-glyphs/))
@@ -29,14 +28,11 @@ yay -S rxvt-unicode-wide-glyphs
 - CozetteVector font
 - figlet + 'speed' figlet font
 
+and you probably should look into [my scripts](https://github.com/krzysckh/bin)
+
 ## how?
 
 please follow the 'how' file
-
-## something's not working!!
-
-maybe i forgot to put something in this repo. if you get lost or something, please create an issue, or mail me on \<krzysckh@wp.pl\>
-
 
 [great sources](https://www.tumfatig.net/2019/customizing-openbsd-xenodm/)
 for configuring xdm

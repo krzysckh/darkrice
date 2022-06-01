@@ -27,6 +27,7 @@ autocmd Filetype c call Set_spaces()
 autocmd Filetype cpp call Set_spaces()
 
 set relativenumber
+set number
 set showcmd
 set mouse=a
 set showmatch
@@ -93,7 +94,7 @@ call plug#begin('~/.vim/plugged')
 	" wakatime stats
 	"Plug 'vimsence/vimsence'
 	" discord rich presence
-	" Plug 'editorconfig/editorconfig-vim'
+	Plug 'editorconfig/editorconfig-vim'
 	" .editorconfig
 	Plug 'vim-utils/vim-man'
 	" man pages lol
@@ -161,4 +162,4 @@ highlight StartifyHeader guifg=#dedede cterm=bold
 "                             replace this with path to your spotify token
 "                             application
 
-let g:lsp_diagnostics_float_cursor = 1
+"let g:lsp_diagnostics_float_cursor = 1
