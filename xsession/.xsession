@@ -19,7 +19,7 @@ xset -dpms
 xwallpaper --center "/home/krzych/Documents/img/wallpaper.png"
 
 # https://raw.githubusercontent.com/krzysckh/bin/master/samelines.pl
-fortune \
+fortune 30% archlinux 40% linux 30% perl \
 	| cowsay \
 	| samelines.pl \
 	| convert -size 1920x1200 -gravity center -background "#2b3339" \

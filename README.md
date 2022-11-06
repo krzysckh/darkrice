@@ -1,4 +1,6 @@
-# dark rice
+# a dark rice :^)
+
+![screenshot](https://raw.githubusercontent.com/krzysckh/darkrice/master/what.png)
 
 since THIS commit, i am abandoning the old colorscheme in favor of everforest
 dark. the old one was **bad**
