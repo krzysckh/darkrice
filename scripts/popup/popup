@@ -1,9 +1,0 @@
-#!/bin/bash
-
-(echo "  $@"; sleep 3) | lemonbar \
-	-g "200x30+20+20" \
-	-f "CozetteVector" \
-	-B "#222222" \
-	-F "#dedede" \
-	-U "#dedede" \
-	-d \

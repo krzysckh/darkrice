@@ -1,33 +1,32 @@
 /* put your custom css here. */
 
 :root {
-	--font-primary: CozetteVector !important;
-	--background-primary: #222222 !important;
+	--font-primary: "agave Nerd Font" !important;
+	--background-primary: #2b3339 !important;
 	--background-teritary: #333333 !important;
-	--background-secondary-alt: #222222 !important;
-	--background-secondary: #222222 !important;
-	--background-mobile-primary: #222222 !important;
-	--channeltextarea-background: #222222 !important;
-	--deprecated-store-bg: #222222 !important;
-	--background-mobile-secondary: #504e4e !important;
-	/*--channeltextarea-background: #504e4e !important;*/
-	--background-floating: #504e4e !important;
-	--brand-experiment: #a451ee !important;
-	--interactive-normal: #dedede !important;
-	--interactive-hover: #33daf5 !important;
-	--interactive-active: #3be29c !important;
-	--channels-default: #dedede !important;
-	--text-normal: #dedede !important;
-	--text-muted: #504e4e !important;
-	--scrollbar-auto-thumb: #222222 !important;
-	--scrollbar-auto-track: #504e4e !important;
-	--background-accent: #222222 !important;
-	--header-primary: #dedede !important;
+	--background-secondary-alt: #2b3339 !important;
+	--background-secondary: #2b3339 !important;
+	--background-mobile-primary: #2b3339 !important;
+	--channeltextarea-background: #2b3339 !important;
+	--deprecated-store-bg: #2b3339 !important;
+	--background-mobile-secondary: #53605c !important;
+	--background-floating: #53605c !important;
+	--brand-experiment: #a7c080!important;
+	--interactive-normal: #d3c6aa !important;
+	--interactive-hover: #7fbbb3 !important;
+	--interactive-active: #a6c080 !important;
+	--channels-default: #d3c6aa !important;
+	--text-normal: #d3c6aa !important;
+	--text-muted: #53605c !important;
+	--scrollbar-auto-thumb: #2b3339 !important;
+	--scrollbar-auto-track: #53605c !important;
+	--background-accent: #2b3339 !important;
+	--header-primary: #d3c6aa !important;
 }
 
 * {
-	font-family: CozetteVector, "Noto Color Emoji" !important;
-	/*color: #dedede;*/
+	font-family: "agave Nerd Font", "Noto Color Emoji" !important;
+	/*color: #d3c6aa;*/
 }
 
 .username-h_Y3Us::before {
@@ -41,4 +40,5 @@
 .username-h_Y3Us{
 	font-weight: bold !important;
 }
+
 

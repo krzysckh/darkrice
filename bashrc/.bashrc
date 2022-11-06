@@ -53,3 +53,10 @@ export HISTFILESIZE=
 
 export MDCAT_PAGER="less -R"
 
+topdf() {
+  [ -z "$1" ] && return
+
+  bare="$(echo $1 | rev | sed 's/.*\.//' | rev)"
+  tesseract "$1" "$bare" -l pol pdf
+  echo "=> $bare"
+}

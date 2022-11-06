@@ -1,8 +1,8 @@
 xterm*faceName:mono12:pixelsize=15
 xterm*maximized:false
 
-!URxvt*font:xft:CozetteVector:pixelsize=18, xft:DejaVu Sans Mono Nerd Font:pixelsize=18, xft:Symbola:pixelsize=18:minspace=False
-URxvt*font:xft:CozetteVector:pixelsize=18, xft:DejaVu Sans Mono Nerd Font:pixelsize=18, xft:Noto Color Emoji:pixelsize=18, xft:Symbola:pixelsize=18:minspace=False
+!URxvt*font:xft:CozetteVector:pixelsize=18, xft:DejaVu Sans Mono Nerd Font:pixelsize=18, xft:Noto Color Emoji:pixelsize=18, xft:Symbola:pixelsize=18:minspace=False
+URxvt*font:xft:agave Nerd Font:pixelsize=18, xft:DejaVu Sans Mono Nerd Font:pixelsize=18, xft:Noto Color Emoji:pixelsize=18, xft:Symbola:pixelsize=18:minspace=False
 
 URxvt*scrollBar: false
 
@@ -11,51 +11,55 @@ URxvt*internalBorder: 20
 URxvt*iso14755: false
 URxvt*iso14755_52: false
 
-URxvt*perl-ext-common: resize-font
+URxvt*perl-ext-common: resize-font,matcher
+URxvt.url-launcher: firefox
+URxvt.matcher.button: Ctrl-1
+URxvt.matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+URxvt.matcher.pattern.2: HTTPS://.*\w
 
 !URxvt.keysym.Control-l: command:\033c
 
-*foreground:        #dedede
-*background:        #222222
-*.foreground:       #dedede
-*.background:       #222222
-URxvt*foreground:   #dedede
-URxvt*background:   [100]#222222
-URxvt*cursorColor:  #dedede
-URxvt*borderColor:  [100]#222222
+*foreground:        #d3c6aa
+*background:        #2b3339
+*.foreground:       #d3c6aa
+*.background:       #2b3339
+URxvt*foreground:   #d3c6aa
+URxvt*background:   [100]#2b3339
+URxvt*cursorColor:  #d3c6aa
+URxvt*borderColor:  [100]#2b3339
 
-*.color0: #222222
-*color0:  #222222
-*.color1: #f04d4d
-*color1:  #f04d4d
-*.color2: #3be29c
-*color2:  #3be29c
-*.color3: #e4f614
-*color3:  #e4f614
-*.color4: #33daf5
-*color4:  #33daf5
-*.color5: #a451ee
-*color5:  #a451ee
-*.color6: #65d61c
-*color6:  #65d61c
-*.color7: #504e4e
-*color7:  #504e4e
-*.color8: #dedede
-*color8:  #dedede
-*.color9: #f04d4d
-*color9:  #f04d4d
-*.color10: #3be29c
-*color10:  #3be29c
-*.color11: #e4f614
-*color11:  #e4f614
-*.color12: #33daf5
-*color12:  #33daf5
-*.color13: #a451ee
-*color13:  #a451ee
-*.color14: #65d61c
-*color14:  #65d61c
-*.color15: #dedede
-*color15:  #dedede
+*.color0: #2b3339
+*color0:  #2b3339
+*.color1: #e67e80
+*color1:  #e67e80
+*.color2: #a7c080
+*color2:  #a7c080
+*.color3: #dbbc7f
+*color3:  #dbbc7f
+*.color4: #7fbbb3
+*color4:  #7fbbb3
+*.color5: #d699b6
+*color5:  #d699b6
+*.color6: #8cc080
+*color6:  #8cc080
+*.color7: #53605c
+*color7:  #53605c
+*.color8: #9da9a0
+*color8:  #9da9a0
+*.color9:  #e67e80
+*color9:   #e67e80
+*.color10: #a7c080
+*color10:  #a7c080
+*.color11: #dbbc7f
+*color11:  #dbbc7f
+*.color12: #7fbbb3
+*color12:  #7fbbb3
+*.color13: #d699b6
+*color13:  #d699b6
+*.color14: #8cc080
+*color14:  #8cc080
+*.color15: #9da9a0
+*color15:  #9da9a0
 
-*.color66: #222222
-*color66:  #222222
+*.color66: #2b3339
+*color66:  #2b3339

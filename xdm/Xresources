@@ -13,22 +13,22 @@ xlogin*login.translations: #override \
 	Ctrl<Key>Return: set-session-argument(failsafe) finish-field()\n\
 	<Key>Return: set-session-argument() finish-field()
 
-xlogin.Login.background: #222222
-xlogin.Login.foreground: #dedede
-xlogin.Login.greetColor: #dedede
-xlogin.Login.inpColor: #222222
-xlogin.Login.promtColor: #222222
-xlogin.Login.hiColor: #dedede
-xlogin.Login.shdColor: #dedede
+xlogin.Login.background: #2b3339
+xlogin.Login.foreground: #d3c6aa
+xlogin.Login.greetColor: #d3c6aa
+xlogin.Login.inpColor: #2b3339
+xlogin.Login.promtColor: #2b3339
+xlogin.Login.hiColor: #d3c6aa
+xlogin.Login.shdColor: #d3c6aa
 
-xlogin*shdColor: #222222
+xlogin*shdColor: #2b3339
 xlogin*hiColor: #504e4e
-xlogin*background: #222222
-xlogin*foreground: #dedede
-xlogin*greetColor: #3be29c
-xlogin*failColor: #f04d4d
-*Foreground: #dedede
-*Background: #222222
+xlogin*background: #2b3339
+xlogin*foreground: #d3c6aa
+xlogin*greetColor: #8cc080
+xlogin*failColor: #e67e80
+*Foreground: #d3c6aa
+*Background: #2b3339
 
 xlogin*useShape: true
 xlogin*logoPadding: 10
@@ -61,8 +61,8 @@ xlogin.login.sepWidth: 0
 !xclock.dateFace: CozetteVector
 ! set in Xsetup_0
 xclock.dateGeom: +780+320
-xclock.background: #222222
-xclock.foreground: #dedede
+xclock.background: #2b3339
+xclock.foreground: #d3c6aa
 xclock.borderWidth: 0
 xclock.Clock.analog: false
 xclock.Clock.chime: false
@@ -71,8 +71,8 @@ xclock.Clock.twentyfour: true
 xclock.Clock.update: 10
 
 ! xmessage !
-xmessage*background: #222222
-xmessage*foreground: #dedede
+xmessage*background: #2b3339
+xmessage*foreground: #d3c6aa
 xmessage*borderWidth: 0
 xmessage*face: CozetteVector
 xmessage*scrollHorizontal: Never

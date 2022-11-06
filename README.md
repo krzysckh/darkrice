@@ -1,8 +1,9 @@
 # dark rice
 
-yes, i'm really bad at choosing names
+since THIS commit, i am abandoning the old colorscheme in favor of everforest
+dark. the old one was **bad**
 
-![img](https://raw.githubusercontent.com/krzysckh/darkrice/master/what.png)
+and yes, i'm really bad at choosing names
 
 ## needed:
 
@@ -12,21 +13,21 @@ yay -S libxft-bgra
 yay -S rxvt-unicode-wide-glyphs
 ```
 - ~~i3wm~~
-- bspwm
+- ~~bspwm~~
+- https://pub.krzysckh.org/dwm.tgz 
+  (change theme to everforest in config.h)
 - sxhkd
 - bspwmbar
 - discord (+ beautifulDiscord)
-- [gwall](https://gist.github.com/krzysckh/938593f83fe482049877040b4faf15d0)
 - vim
 - vim-plug
 - picom
 - spotify
 - spicetify
-- spotify-now (for spotify popups)
-- clr (for colors in spotify popups)
 - dmenu
-- CozetteVector font
+- agave nerd font
 - figlet + 'speed' figlet font
+- perl
 
 and you probably should look into [my scripts](https://github.com/krzysckh/bin)
 

@@ -1,8 +1,8 @@
 [global]
     frame_width = 1
-    frame_color = "#dedede"
+    frame_color = "#d3c6aa"
     
-    font = CozetteVector 10
+    font = agave Nerd Font 13
     
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -43,8 +43,8 @@
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
     shrink = yes
-    transparency = 15
-    idle_threshold = 120 
+    transparency = 0
+    idle_threshold = 30
     monitor = 0
     follow = mouse
     
@@ -60,28 +60,27 @@
     # Horizontal padding.
     horizontal_padding = 10
     
-    separator_color = "#dedede"
-    startup_notification = false
+    separator_color = "#d3c6aa"
+    startup_notification = true
     
     dmenu = /usr/bin/dmenu -p dunst:
 
-    browser = firefox-esr
+    browser = firefox
     icon_position = left
     icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/
     max_icon_size=128
 
 [urgency_low]
-    background = "#222222"
-    foreground = "#dedede"
+    background = "#53605c"
+    foreground = "#d3c6aa"
     timeout = 10
 
 [urgency_normal]
-    background = "#222222"
-    foreground = "#dedede"
+    background = "#2b3339"
+    foreground = "#d3c6aa"
     timeout = 10
 
 [urgency_critical]
-    background = "#f04d4d"
-    foreground = "#dedede"
-    frame_color = "#dedede"
+    background = "#503946"
+    foreground = "#d3c6aa"
     timeout = 0
