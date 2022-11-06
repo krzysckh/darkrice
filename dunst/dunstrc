@@ -2,7 +2,7 @@
     frame_width = 1
     frame_color = "#d3c6aa"
     
-    font = agave Nerd Font 13
+    font = agave Nerd Font 7
     
     # Allow a small subset of html markup:
     #   <b>bold</b>
