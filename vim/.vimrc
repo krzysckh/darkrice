@@ -18,10 +18,11 @@ function Set_spaces()
 	set shiftwidth=2
 endfunction
 
-
 autocmd Filetype c call Set_spaces()
 autocmd Filetype cpp call Set_spaces()
 autocmd Filetype perl call Set_spaces()
+autocmd Filetype html call Set_spaces()
+autocmd Filetype css call Set_spaces()
 
 set relativenumber
 set number
@@ -78,16 +79,19 @@ call plug#begin('~/.vim/plugged')
 	" discord rich presence
 	Plug 'editorconfig/editorconfig-vim'
 	" .editorconfig
-  Plug 'sainnhe/everforest'
-  " colorscheme
+	Plug 'sirosen/vim-rockstar'
+	Plug 'sainnhe/everforest', { 'commit': 'd855af543410c4047fc03798f5d58ddd07abcf2d' }
+	" colorscheme
 
 	" IDE features
-	Plug 'prabirshrestha/async.vim'
-	Plug 'prabirshrestha/vim-lsp'
-	Plug 'prabirshrestha/asyncomplete.vim'
-	Plug 'prabirshrestha/asyncomplete-lsp.vim'
-	Plug 'mattn/vim-lsp-settings'
-	Plug 'ajh17/vimcompletesme'
+	"Plug 'prabirshrestha/async.vim'
+	"Plug 'prabirshrestha/vim-lsp'
+	"Plug 'prabirshrestha/asyncomplete.vim'
+	"Plug 'prabirshrestha/asyncomplete-lsp.vim'
+	"Plug 'mattn/vim-lsp-settings'
+	"Plug 'ajh17/vimcompletesme'
+	Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+	Plug 'bmeneg/coc-perl', {'do': 'yarn install && yarn build'}
 
 	"Plug 'jiangmiao/auto-pairs'
 call plug#end()
@@ -121,3 +125,21 @@ set background=dark
 let g:everforest_background = 'hard'
 let g:everforest_better_performance = 1
 colorscheme everforest
+
+set guifont=agave\ Nerd\ Font\ 15
+set guioptions=-Ac
+
+set signcolumn=yes
+let g:vcm_tab_complete = 'user'
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+	\ coc#pum#visible() ? coc#pum#next(1) :
+	\ CheckBackspace() ? "\<Tab>" :
+	\ coc#refresh()
+
+highlight RedundantWhitespace ctermbg=red guibg=#4c3743
+match RedundantWhitespace /\s\+$/

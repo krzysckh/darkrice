@@ -4,6 +4,8 @@
 # krzysckh.org
 # krzysckh 2021
 
+alias pm="sudo make clean ; perl Makefile.PL ; sudo make install"
+
 stty stop undef
 # stop ctrl-s
 

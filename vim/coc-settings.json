@@ -1,0 +1,22 @@
+{
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.enableLinkedEditing": true,
+  "diagnostic.floatConfig": {
+    "rounded": false,
+    "border": false 
+  },
+  "hover.floatConfig": {
+    "rounded": false,
+    "border": false 
+  },
+
+  "diagnostic.virtualText": false,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.separateRelatedInformationAsDiagnostics": true,
+  "pullDiagnostic.onChange": false,
+  "pullDiagnostic.onSave": true,
+  "inlayHint.enable": false,
+
+  "semanticTokens.enable": false,
+  "perl.enable": true
+}

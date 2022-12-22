@@ -18,8 +18,6 @@ yay -S rxvt-unicode-wide-glyphs
 - ~~bspwm~~
 - https://pub.krzysckh.org/dwm.tgz 
   (change theme to everforest in config.h)
-- sxhkd
-- bspwmbar
 - discord (+ beautifulDiscord)
 - vim
 - vim-plug
