@@ -1,8 +1,12 @@
 # .bashrc
 # written by krzych for krzych
-# 
+#
 # krzysckh.org
-# krzysckh 2021
+# krzysckh 2021, 2022, 2023
+
+cls
+# some update of urxvt f'd something up with geometry in dwm
+# it's a "fix"
 
 alias pm="sudo make clean ; perl Makefile.PL ; sudo make install"
 
@@ -62,3 +66,8 @@ topdf() {
   tesseract "$1" "$bare" -l pol pdf
   echo "=> $bare"
 }
+
+
+export MAKESYSPATH=/usr/share/mk/
+
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh

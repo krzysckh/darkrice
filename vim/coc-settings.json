@@ -18,5 +18,15 @@
   "inlayHint.enable": false,
 
   "semanticTokens.enable": false,
-  "perl.enable": true
+
+  "languageserver": {
+    "perlnavigator": {
+      "command": "node",
+      "args": [
+        "/home/krzych/nmojeprogramy/PerlNavigator/server/out/server.js",
+        "--stdio"
+      ],
+      "filetypes": ["perl"]
+    }
+  }
 }

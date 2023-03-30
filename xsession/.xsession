@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH=$PATH:/home/krzych/bin:/home/krzych/.local/bin
+export PATH=$PATH:/home/krzych/bin:/home/krzych/.local/bin:/home/krzych/.cargo/bin
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 xrdb ~/.Xresources

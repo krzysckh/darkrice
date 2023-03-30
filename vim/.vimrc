@@ -12,10 +12,10 @@ syntax on
 " of course
 
 function Set_spaces()
-	set expandtab
-	set tabstop=2
-	set softtabstop=2
-	set shiftwidth=2
+  set expandtab
+  set tabstop=2
+  set softtabstop=2
+  set shiftwidth=2
 endfunction
 
 autocmd Filetype c call Set_spaces()
@@ -60,41 +60,52 @@ let &t_EI = "\e[2 q"
 " pipe for insert, block for the rest
 
 call plug#begin('~/.vim/plugged')
-	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase'}
-	" html colors
-	Plug 'mhinz/vim-startify'
-	" start page (,start)
-	Plug 'ryanoasis/vim-devicons'
-	" icons
-	Plug 'preservim/nerdcommenter'
-	" autocomments (,c<Space>)
-	Plug 'mhinz/vim-halo'
-	" where is my cursor?? (,,)
-	Plug 'krzysckh/turtel-vim'
-	" Plug 'mattpenney89/vimify'
-	" spotify controls in vim (,spt)
-	Plug 'wakatime/vim-wakatime'
-	" wakatime stats
-	"Plug 'vimsence/vimsence'
-	" discord rich presence
-	Plug 'editorconfig/editorconfig-vim'
-	" .editorconfig
-	Plug 'sirosen/vim-rockstar'
-	Plug 'sainnhe/everforest', { 'commit': 'd855af543410c4047fc03798f5d58ddd07abcf2d' }
-	" colorscheme
+  Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase'}
+  " html colors
+  Plug 'mhinz/vim-startify'
+  " start page (,start)
+  Plug 'ryanoasis/vim-devicons'
+  " icons
+  Plug 'preservim/nerdcommenter'
+  " autocomments (,c<Space>)
+  Plug 'mhinz/vim-halo'
+  " where is my cursor?? (,,)
+  Plug 'krzysckh/turtel-vim'
+  " Plug 'mattpenney89/vimify'
+  " spotify controls in vim (,spt)
+  Plug 'wakatime/vim-wakatime'
+  " wakatime stats
+  "Plug 'vimsence/vimsence'
+  " discord rich presence
+  Plug 'editorconfig/editorconfig-vim'
+  " .editorconfig
+  Plug 'sirosen/vim-rockstar'
+  Plug 'sainnhe/everforest', { 'commit': 'd855af543410c4047fc03798f5d58ddd07abcf2d' }
+  " colorscheme
+  Plug 'hotchpotch/perldoc-vim'
+  " perldoc K
+  Plug 'junegunn/vim-easy-align'
+  " align
+  Plug 'jaawerth/fennel.vim'
+  " fennel syntax<br>
 
-	" IDE features
-	"Plug 'prabirshrestha/async.vim'
-	"Plug 'prabirshrestha/vim-lsp'
-	"Plug 'prabirshrestha/asyncomplete.vim'
-	"Plug 'prabirshrestha/asyncomplete-lsp.vim'
-	"Plug 'mattn/vim-lsp-settings'
-	"Plug 'ajh17/vimcompletesme'
-	Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-	Plug 'bmeneg/coc-perl', {'do': 'yarn install && yarn build'}
+  " IDE features
+  "Plug 'prabirshrestha/async.vim'
+  "Plug 'prabirshrestha/vim-lsp'
+  "Plug 'prabirshrestha/asyncomplete.vim'
+  "Plug 'prabirshrestha/asyncomplete-lsp.vim'
+  "Plug 'mattn/vim-lsp-settings'
+  "Plug 'ajh17/vimcompletesme'
+  Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
-	"Plug 'jiangmiao/auto-pairs'
+  "Plug 'jiangmiao/auto-pairs'
 call plug#end()
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
+nmap <leader>a <Plug>(EasyAlign)
+xmap <leader>a <Plug>(EasyAlign)
 
 map <leader>todo :tabnew<CR>:e ~/todo<CR>
 map <leader>e :%!bc<CR>
@@ -108,16 +119,15 @@ let g:NERDCreateDefaultMappings = 1
 
 " startify
 let g:startify_custom_header = 
-			\ startify#center(split(system('figlet -w $(tput cols) -f speed vim'), '\n'))
+      \ startify#center(split(system('figlet -w $(tput cols) -f speed vim'), '\n'))
 
 " the old solution ↓ stopped working for some reason lol
 " \ startify#pad(split(system('figlet -w $(tput cols) -c -f speed vim'), '\n'))
 
 let g:startify_lists = [
-			\ { 'type': 'files', 'header': ['recent'] },
-			\ { 'type': 'dir', 'header': ['in '. getcwd()] }
-			\ ]
-"highlight StartifyHeader guifg=#dedede cterm=bold
+      \ { 'type': 'files', 'header': ['recent'] },
+      \ { 'type': 'dir', 'header': ['in '. getcwd()] }
+      \ ]
 
 let g:lsp_diagnostics_float_cursor = 1
 
@@ -127,7 +137,7 @@ let g:everforest_better_performance = 1
 colorscheme everforest
 
 set guifont=agave\ Nerd\ Font\ 15
-set guioptions=-Ac
+set guioptions=Ac
 
 set signcolumn=yes
 let g:vcm_tab_complete = 'user'
@@ -137,9 +147,9 @@ function! CheckBackspace() abort
 endfunction
 
 inoremap <silent><expr> <Tab>
-	\ coc#pum#visible() ? coc#pum#next(1) :
-	\ CheckBackspace() ? "\<Tab>" :
-	\ coc#refresh()
+  \ coc#pum#visible() ? coc#pum#next(1) :
+  \ CheckBackspace() ? "\<Tab>" :
+  \ coc#refresh()
 
 highlight RedundantWhitespace ctermbg=red guibg=#4c3743
 match RedundantWhitespace /\s\+$/
