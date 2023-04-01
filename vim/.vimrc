@@ -112,6 +112,8 @@ map <leader>e :%!bc<CR>
 map <leader>json :%!python3 -m json.tool<CR>
 map <leader><leader> :call halo#run({'shape':'line'})<CR>
 
+imap <C-l> λ
+
 command! -range=% Topdf :hardcopy > %.ps | !ps2pdf %.ps && rm %.ps && echo "=> %.pdf"
 
 let g:Hexokinase_highlighters = ['backgroundfull']

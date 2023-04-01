@@ -16,8 +16,8 @@ stty stop undef
 export GCC_COLORS='error=01;31:warning=01;30:note=01;36:caret=01;32:locus=01:quote=01'
 # cc colored warnings etc
 
-PS1='\u: \[\033[37m\]\W \[\033[34m\]→ \[\033[0m'
-PS2='↪ '
+PS1='λ '
+PS2='> '
 # prompt
 
 export EDITOR='vim'
