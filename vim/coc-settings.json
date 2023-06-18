@@ -3,11 +3,11 @@
   "coc.preferences.enableLinkedEditing": true,
   "diagnostic.floatConfig": {
     "rounded": false,
-    "border": false 
+    "border": false
   },
   "hover.floatConfig": {
     "rounded": false,
-    "border": false 
+    "border": false
   },
 
   "diagnostic.virtualText": false,
@@ -27,6 +27,23 @@
         "--stdio"
       ],
       "filetypes": ["perl"]
+    },
+    "fennel-language-server": {
+      "command": "fennel-language-server",
+      "args": [
+        "lsp",
+        "stdio"
+      ],
+      "filetypes": ["fennel"]
+    },
+    "vls": {
+      "command": "/home/krzych/.vls/bin/vls_linux_x64",
+      "args": [],
+      "filetypes": ["vlang"]
+    },
+    "vala": {
+      "command": "vala-language-server",
+      "filetypes": ["vala", "genie"]
     }
   }
 }

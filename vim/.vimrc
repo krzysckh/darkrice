@@ -18,11 +18,15 @@ function Set_spaces()
   set shiftwidth=2
 endfunction
 
-autocmd Filetype c call Set_spaces()
-autocmd Filetype cpp call Set_spaces()
-autocmd Filetype perl call Set_spaces()
-autocmd Filetype html call Set_spaces()
-autocmd Filetype css call Set_spaces()
+function Set_tabs()
+  set noexpandtab
+  set tabstop=4
+  set softtabstop=4
+  set shiftwidth=4
+endfunction
+
+autocmd Filetype make call Set_tabs()
+autocmd Filetype * call Set_spaces()
 
 set relativenumber
 set number
@@ -87,7 +91,18 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/vim-easy-align'
   " align
   Plug 'jaawerth/fennel.vim'
-  " fennel syntax<br>
+  " fennel syntax
+  Plug 'janet-lang/janet.vim'
+  " janet syntax
+  Plug 'ollykel/v-vim'
+  " v syntax
+  Plug 'vala-lang/vala.vim'
+  " vala syntax
+  Plug 'dart-lang/dart-vim-plugin'
+  Plug 'thosakwe/vim-flutter'
+  " flutter and dart
+  Plug 'junegunn/fzf.vim'
+  " fzf
 
   " IDE features
   "Plug 'prabirshrestha/async.vim'
@@ -107,20 +122,28 @@ nmap ga <Plug>(EasyAlign)
 nmap <leader>a <Plug>(EasyAlign)
 xmap <leader>a <Plug>(EasyAlign)
 
+nmap <leader>b :Buffers<cr>
+
+nnoremap <leader>fa :FlutterRun<cr>
+nnoremap <leader>fq :FlutterQuit<cr>
+nnoremap <leader>fr :FlutterHotReload<cr>
+nnoremap <leader>fR :FlutterHotRestart<cr>
+nnoremap <leader>fD :FlutterVisualDebug<cr>
+
 map <leader>todo :tabnew<CR>:e ~/todo<CR>
-map <leader>e :%!bc<CR>
-map <leader>json :%!python3 -m json.tool<CR>
 map <leader><leader> :call halo#run({'shape':'line'})<CR>
 
 imap <C-l> λ
 
 command! -range=% Topdf :hardcopy > %.ps | !ps2pdf %.ps && rm %.ps && echo "=> %.pdf"
 
+let g:fzf_buffers_jump = 1
 let g:Hexokinase_highlighters = ['backgroundfull']
 let g:NERDCreateDefaultMappings = 1
+let g:hy_enable_conceal = 1
 
 " startify
-let g:startify_custom_header = 
+let g:startify_custom_header =
       \ startify#center(split(system('figlet -w $(tput cols) -f speed vim'), '\n'))
 
 " the old solution ↓ stopped working for some reason lol
