@@ -9,6 +9,7 @@ cls
 # it's a "fix"
 
 alias pm="sudo make clean ; perl Makefile.PL ; sudo make install"
+alias lg=lazygit
 
 stty stop undef
 # stop ctrl-s
