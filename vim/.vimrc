@@ -1,15 +1,13 @@
 echo system('vimeverywhere_pop_float')
 
 filetype plugin indent on
-" basic filetype thingies
 
 set colorcolumn=80
 
-let mapleader = ","
-" easier leader
+let mapleader = " "
+nnoremap <space> <Nop>
 
 syntax on
-" of course
 
 function Set_spaces()
   set expandtab
@@ -72,8 +70,6 @@ call plug#begin('~/.vim/plugged')
   " icons
   Plug 'preservim/nerdcommenter'
   " autocomments (,c<Space>)
-  Plug 'mhinz/vim-halo'
-  " where is my cursor?? (,,)
   Plug 'krzysckh/turtel-vim'
   " Plug 'mattpenney89/vimify'
   " spotify controls in vim (,spt)
@@ -103,6 +99,9 @@ call plug#begin('~/.vim/plugged')
   " flutter and dart
   Plug 'junegunn/fzf.vim'
   " fzf
+  Plug 'itchyny/lightline.vim'
+  " lightline
+  Plug 'tpope/vim-fugitive'
 
   " IDE features
   "Plug 'prabirshrestha/async.vim'
@@ -115,6 +114,8 @@ call plug#begin('~/.vim/plugged')
 
   "Plug 'jiangmiao/auto-pairs'
 call plug#end()
+
+nmap <leader>y "+y
 
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
@@ -131,7 +132,6 @@ nnoremap <leader>fR :FlutterHotRestart<cr>
 nnoremap <leader>fD :FlutterVisualDebug<cr>
 
 map <leader>todo :tabnew<CR>:e ~/todo<CR>
-map <leader><leader> :call halo#run({'shape':'line'})<CR>
 
 imap <C-l> λ
 
@@ -140,7 +140,6 @@ command! -range=% Topdf :hardcopy > %.ps | !ps2pdf %.ps && rm %.ps && echo "=> %
 let g:fzf_buffers_jump = 1
 let g:Hexokinase_highlighters = ['backgroundfull']
 let g:NERDCreateDefaultMappings = 1
-let g:hy_enable_conceal = 1
 
 " startify
 let g:startify_custom_header =
@@ -178,3 +177,42 @@ inoremap <silent><expr> <Tab>
 
 highlight RedundantWhitespace ctermbg=red guibg=#4c3743
 match RedundantWhitespace /\s\+$/
+autocmd User StartifyReady match RedundantWhitespace //
+autocmd User StartifyBufferOpened match RedundantWhitespace /\s\+$/
+
+aug Conceal
+  au!
+  au FileType * syntax match Normal /\<sum\>/ conceal cchar=∑
+  au FileType * syntax match Boolean /\<\#t\(rue\)\?\>/ conceal cchar=⊤
+  au FileType * syntax match Boolean /\<\#f\(alse\)\?\>/ conceal cchar=⊥
+aug END
+
+set conceallevel=2
+set concealcursor=nv
+
+set laststatus=2
+set noshowmode
+let g:lightline = {
+      \ 'colorscheme': 'everforest',
+			\ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
+
+let g:lightline.mode_map = {
+    \ 'n':      'normal',
+    \ 'i':      'insert',
+    \ 'R':      'replace',
+    \ 'v':      'visual',
+    \ 'V':      'v-line',
+    \ "\<C-v>": 'v-block',
+    \ 'c':      'command',
+    \ 's':      'select',
+    \ 'S':      's-line',
+    \ "\<C-s>": 's-block',
+    \ 't':      'terminal',
+    \ }
