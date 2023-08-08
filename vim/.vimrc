@@ -41,6 +41,7 @@ set title
 set ttyfast
 set signcolumn=yes
 set wildmenu
+set wildoptions=fuzzy
 set backspace=indent,eol,start
 
 set noexpandtab
@@ -53,8 +54,6 @@ au BufNewFile,BufRead *.axaml setf xml
 
 au BufNewFile,BufRead *.nelua setf lua
 
-"au BufNewFile,BufRead *.y call Set_tab_to_spaces()
-
 let &t_SI = "\e[5 q"
 let &t_SR = "\e[4 q"
 let &t_EI = "\e[2 q"
@@ -63,59 +62,31 @@ let &t_EI = "\e[2 q"
 
 call plug#begin('~/.vim/plugged')
   Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase'}
-  " html colors
   Plug 'mhinz/vim-startify'
-  " start page (,start)
   Plug 'ryanoasis/vim-devicons'
-  " icons
   Plug 'preservim/nerdcommenter'
-  " autocomments (,c<Space>)
   Plug 'krzysckh/turtel-vim'
-  " Plug 'mattpenney89/vimify'
-  " spotify controls in vim (,spt)
   Plug 'wakatime/vim-wakatime'
-  " wakatime stats
-  "Plug 'vimsence/vimsence'
-  " discord rich presence
   Plug 'editorconfig/editorconfig-vim'
-  " .editorconfig
   Plug 'sirosen/vim-rockstar'
   Plug 'sainnhe/everforest', { 'commit': 'd855af543410c4047fc03798f5d58ddd07abcf2d' }
-  " colorscheme
   Plug 'hotchpotch/perldoc-vim'
-  " perldoc K
   Plug 'junegunn/vim-easy-align'
-  " align
   Plug 'jaawerth/fennel.vim'
-  " fennel syntax
   Plug 'janet-lang/janet.vim'
-  " janet syntax
   Plug 'ollykel/v-vim'
-  " v syntax
   Plug 'vala-lang/vala.vim'
-  " vala syntax
   Plug 'dart-lang/dart-vim-plugin'
   Plug 'thosakwe/vim-flutter'
-  " flutter and dart
   Plug 'junegunn/fzf.vim'
-  " fzf
   Plug 'itchyny/lightline.vim'
-  " lightline
   Plug 'tpope/vim-fugitive'
-
-  " IDE features
-  "Plug 'prabirshrestha/async.vim'
-  "Plug 'prabirshrestha/vim-lsp'
-  "Plug 'prabirshrestha/asyncomplete.vim'
-  "Plug 'prabirshrestha/asyncomplete-lsp.vim'
-  "Plug 'mattn/vim-lsp-settings'
-  "Plug 'ajh17/vimcompletesme'
+  Plug 'justinmk/vim-dirvish'
   Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-
-  "Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 nmap <leader>y "+y
+nmap <BS> <C-^>
 
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
@@ -131,8 +102,6 @@ nnoremap <leader>fr :FlutterHotReload<cr>
 nnoremap <leader>fR :FlutterHotRestart<cr>
 nnoremap <leader>fD :FlutterVisualDebug<cr>
 
-map <leader>todo :tabnew<CR>:e ~/todo<CR>
-
 imap <C-l> λ
 
 command! -range=% Topdf :hardcopy > %.ps | !ps2pdf %.ps && rm %.ps && echo "=> %.pdf"
@@ -144,9 +113,6 @@ let g:NERDCreateDefaultMappings = 1
 " startify
 let g:startify_custom_header =
       \ startify#center(split(system('figlet -w $(tput cols) -f speed vim'), '\n'))
-
-" the old solution ↓ stopped working for some reason lol
-" \ startify#pad(split(system('figlet -w $(tput cols) -c -f speed vim'), '\n'))
 
 let g:startify_lists = [
       \ { 'type': 'files', 'header': ['recent'] },
@@ -216,3 +182,11 @@ let g:lightline.mode_map = {
     \ "\<C-s>": 's-block',
     \ 't':      'terminal',
     \ }
+
+augroup dirvish_config
+  autocmd!
+  autocmd FileType dirvish nnoremap <silent><buffer> h
+        \ <Plug>(dirvish_up)
+  autocmd FileType dirvish nnoremap <silent><buffer> <bs>
+        \ <Plug>(dirvish_up)
+augroup END
