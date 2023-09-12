@@ -82,11 +82,15 @@ call plug#begin('~/.vim/plugged')
   Plug 'itchyny/lightline.vim'
   Plug 'tpope/vim-fugitive'
   Plug 'justinmk/vim-dirvish'
+  Plug 'antoyo/vim-licenses'
   Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 call plug#end()
 
 nmap <leader>y "+y
+nmap <leader>p "+p
 nmap <BS> <C-^>
+nmap > >>
+nmap < <<
 
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
@@ -110,9 +114,17 @@ let g:fzf_buffers_jump = 1
 let g:Hexokinase_highlighters = ['backgroundfull']
 let g:NERDCreateDefaultMappings = 1
 
+let g:licenses_copyright_holders_name = 'krzysckh <kpm@linux.pl>'
+let g:licenses_default_commands = ['gpl', 'mit', 'bsd2', 'bsd3', 'wtfpl', 'cc0']
+
 " startify
-let g:startify_custom_header =
-      \ startify#center(split(system('figlet -w $(tput cols) -f speed vim'), '\n'))
+if has('gui_running')
+  let g:startify_custom_header =
+        \ startify#center(split(system('figlet -w 80 -f speed vim'), '\n'))
+else
+  let g:startify_custom_header =
+        \ startify#center(split(system('figlet -w $(tput cols) -f speed vim'), '\n'))
+endif
 
 let g:startify_lists = [
       \ { 'type': 'files', 'header': ['recent'] },
@@ -160,7 +172,7 @@ set laststatus=2
 set noshowmode
 let g:lightline = {
       \ 'colorscheme': 'everforest',
-			\ 'active': {
+      \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
       \ },

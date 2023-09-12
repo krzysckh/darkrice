@@ -14,7 +14,6 @@ xset -dpms
 [ -z "$(pgrep urxvtd)" ] && urxvtd -q -o -f
 [ -z "$(pgrep dunst)" ] && dunst &
 [ -z "$(pgrep xbanish)" ] && xbanish &
-[ -z "$(pgrep picom)" ] && picom --config "/home/krzych/.config/picom/picom.conf" -b
 
 xwallpaper --center "/home/krzych/Documents/img/wallpaper.png"
 
