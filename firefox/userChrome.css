@@ -41,7 +41,7 @@
   --urlbar-separator-color: transparent !important;
 }
 
-.tab-background[selected="true"] {
+.tabbrowser-tab[selected="true"] {
   background: var(--mff-tab-selected-bg) !important;
 }
 

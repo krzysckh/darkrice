@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH=$PATH:/home/krzych/bin:/home/krzych/.local/bin:/home/krzych/.cargo/bin:/opt/flutter/bin
+export PATH=$PATH:/home/krzych/bin:/home/krzych/.local/bin:/home/krzych/.cargo/bin:/opt/flutter/bin:/opt/cosmo/bin
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 xrdb ~/.Xresources
@@ -14,6 +14,7 @@ xset -dpms
 [ -z "$(pgrep urxvtd)" ] && urxvtd -q -o -f
 [ -z "$(pgrep dunst)" ] && dunst &
 [ -z "$(pgrep xbanish)" ] && xbanish &
+[ -z "$(pgrep redshift)" ] && redshift -l 50:20 &
 
 xwallpaper --center "/home/krzych/Documents/img/wallpaper.png"
 

@@ -83,6 +83,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
   Plug 'justinmk/vim-dirvish'
   Plug 'antoyo/vim-licenses'
+  Plug 'sheerun/vim-polyglot'
+  Plug 'tpope/vim-speeddating'
+  Plug 'tpope/vim-eunuch'
+  Plug 'vim-scripts/transpose-words'
+  Plug 'sillybun/vim-repl'
   Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 call plug#end()
 
@@ -91,6 +96,7 @@ nmap <leader>p "+p
 nmap <BS> <C-^>
 nmap > >>
 nmap < <<
+tnoremap <S-space> <space>
 
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
@@ -100,15 +106,37 @@ xmap <leader>a <Plug>(EasyAlign)
 
 nmap <leader>b :Buffers<cr>
 
+nmap <leader>r :REPLToggle<cr>
+
 nnoremap <leader>fa :FlutterRun<cr>
 nnoremap <leader>fq :FlutterQuit<cr>
 nnoremap <leader>fr :FlutterHotReload<cr>
 nnoremap <leader>fR :FlutterHotRestart<cr>
 nnoremap <leader>fD :FlutterVisualDebug<cr>
 
+nmap <C-t> <Plug>Transposewords
+imap <C-t> <Plug>Transposewords
+cmap <C-t> <Plug>Transposewords
+
 imap <C-l> λ
 
 command! -range=% Topdf :hardcopy > %.ps | !ps2pdf %.ps && rm %.ps && echo "=> %.pdf"
+
+let g:sendtorepl_invoke_key = "<leader>e"
+let g:repl_console_name = '*repl*'
+let g:repl_position = 3
+let g:repl_input_symbols = {
+      \ 'python': ['>>>', '>>>>', 'ipdb>', 'pdb', '...'],
+      \ 'scheme': ['>', ''],
+      \ 'racket': ['>', '']
+      \ }
+
+let g:repl_program = {
+      \	'python': ['python'],
+      \ 'scheme' : ['ol'],
+      \ 'racket' : ['racket'],
+      \	'default': ['bash']
+      \	}
 
 let g:fzf_buffers_jump = 1
 let g:Hexokinase_highlighters = ['backgroundfull']
@@ -138,8 +166,9 @@ let g:everforest_background = 'hard'
 let g:everforest_better_performance = 1
 colorscheme everforest
 
-set guifont=agave\ Nerd\ Font\ 15
+set guifont=Lilex\ 12
 set guioptions=Ac
+set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
 
 set signcolumn=yes
 let g:vcm_tab_complete = 'user'

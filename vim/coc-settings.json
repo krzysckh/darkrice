@@ -44,6 +44,11 @@
     "vala": {
       "command": "vala-language-server",
       "filetypes": ["vala", "genie"]
+    },
+    "rust": {
+      "command": "rust-analyzer",
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"]
     }
   }
 }
