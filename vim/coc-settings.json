@@ -49,6 +49,16 @@
       "command": "rust-analyzer",
       "filetypes": ["rust"],
       "rootPatterns": ["Cargo.toml"]
+    },
+    "racket": {
+      "command": "racket",
+      "args": [
+        "-l",
+        "racket-langserver"
+      ],
+      "filetypes": [
+        "racket", "rkt"
+      ]
     }
   }
 }

@@ -98,6 +98,8 @@ nmap > >>
 nmap < <<
 tnoremap <S-space> <space>
 
+map <leader>lc :s/^/; /<cr>
+
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
