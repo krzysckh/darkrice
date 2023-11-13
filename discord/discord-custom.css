@@ -41,4 +41,7 @@ span[class^=username_] {
 	font-weight: bold !important;
 }
 
+span[class^=username__]::before, span[class^=username__]::after {
+	content: "" !important;
+}
 
