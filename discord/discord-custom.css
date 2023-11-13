@@ -29,15 +29,15 @@
 	/*color: #d3c6aa;*/
 }
 
-.username-h_Y3Us::before {
+span[class^=username_]::before {
 	content: "<" !important;
 }
 
-.username-h_Y3Us::after {
+span[class^=username_]::after {
 	content: ">" !important;
 }
 
-.username-h_Y3Us{
+span[class^=username_] {
 	font-weight: bold !important;
 }
 
