@@ -66,7 +66,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ryanoasis/vim-devicons'
   Plug 'preservim/nerdcommenter'
   Plug 'krzysckh/turtel-vim'
-  Plug 'wakatime/vim-wakatime'
+  "Plug 'wakatime/vim-wakatime'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'sirosen/vim-rockstar'
   Plug 'sainnhe/everforest', { 'commit': 'd855af543410c4047fc03798f5d58ddd07abcf2d' }
@@ -78,7 +78,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vala-lang/vala.vim'
   Plug 'dart-lang/dart-vim-plugin'
   Plug 'thosakwe/vim-flutter'
-  Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'itchyny/lightline.vim'
   Plug 'tpope/vim-fugitive'
   Plug 'justinmk/vim-dirvish'
@@ -89,7 +89,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-scripts/transpose-words'
   Plug 'sillybun/vim-repl'
   Plug 'othree/eregex.vim'
-  Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarnpkg install --frozen-lockfile'}
 call plug#end()
 
 nmap <leader>y "+y

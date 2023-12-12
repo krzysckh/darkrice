@@ -1,8 +1,9 @@
 xterm*faceName:mono12:pixelsize=15
 xterm*maximized:false
+Xcursor.theme: X11-default-black
 
 !URxvt*font:xft:CozetteVector:pixelsize=18, xft:DejaVu Sans Mono Nerd Font:pixelsize=18, xft:Noto Color Emoji:pixelsize=18, xft:Symbola:pixelsize=18:minspace=False
-URxvt*font:xft:agave Nerd Font:pixelsize=18, xft:DejaVu Sans Mono Nerd Font:pixelsize=18, xft:Noto Color Emoji:pixelsize=18, xft:Symbola:pixelsize=18:minspace=False
+URxvt.font:xft:Lilex:pixelsize=13:weight=medium, xft:DejaVu Sans Mono Nerd Font:pixelsize=13, xft:Noto Color Emoji:pixelsize=14
 
 URxvt*scrollBar: false
 

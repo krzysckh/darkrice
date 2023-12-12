@@ -1,6 +1,8 @@
 #!/bin/sh
 
-export PATH=$PATH:/home/krzych/bin:/home/krzych/.local/bin:/home/krzych/.cargo/bin:/opt/flutter/bin:/opt/cosmo/bin
+export PLAN9=/home/kpm/nmojeprogramy/plan9port
+export PATH=$PATH:/home/kpm/bin:/home/kpm/.local/bin:/home/kpm/.cargo/bin:/opt/flutter/bin:/opt/cosmo/bin:/sbin:$PLAN9/bin:/home/kpm/go/bin
+
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 xrdb ~/.Xresources
@@ -16,24 +18,20 @@ xset -dpms
 [ -z "$(pgrep xbanish)" ] && xbanish &
 [ -z "$(pgrep redshift)" ] && redshift -l 50:20 &
 
-xwallpaper --center "/home/krzych/Documents/img/wallpaper.png"
+xwallpaper --center "/home/kpm/Documents/img/wallpaper.png"
 
 # https://raw.githubusercontent.com/krzysckh/bin/master/samelines.pl
-fortune 30% archlinux 40% linux 30% perl \
+fortune \
   | cowsay \
   | samelines.pl \
   | convert -size 1920x1200 -gravity center -background "#2b3339" \
   -fill "#a7c080" -pointsize 15 \
-  -font 'agave-regular-Nerd-Font-Complete' label:@- /tmp/wall.png
+  -font 'lilex' label:@- /tmp/wall.png
 xwallpaper --maximize /tmp/wall.png
 
 pgrep status_inf | xargs kill -9
 
 
-case "$(cat /tmp/_RUN_WM)" in
-  "dwm")
-    status_inf &
-    dwm
-    ;;
-esac
+status_inf &
+dwm
 

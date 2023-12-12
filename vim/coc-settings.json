@@ -23,7 +23,7 @@
     "perlnavigator": {
       "command": "node",
       "args": [
-        "/home/krzych/nmojeprogramy/PerlNavigator/server/out/server.js",
+        "/home/kpm/nmojeprogramy/PerlNavigator/server/out/server.js",
         "--stdio"
       ],
       "filetypes": ["perl"]
@@ -37,7 +37,7 @@
       "filetypes": ["fennel"]
     },
     "vls": {
-      "command": "/home/krzych/.vls/bin/vls_linux_x64",
+      "command": "/home/kpm/.vls/bin/vls_linux_x64",
       "args": [],
       "filetypes": ["vlang"]
     },

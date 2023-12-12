@@ -1,7 +1,7 @@
 /* put your custom css here. */
 
 :root {
-	--font-primary: "agave Nerd Font" !important;
+	--font-primary: "Lilex" !important;
 	--background-primary: #2b3339 !important;
 	--background-teritary: #333333 !important;
 	--background-secondary-alt: #2b3339 !important;
@@ -25,7 +25,7 @@
 }
 
 * {
-	font-family: "agave Nerd Font", "Noto Color Emoji" !important;
+	font-family: "Lilex", "Noto Color Emoji" !important;
 	/*color: #d3c6aa;*/
 }
 

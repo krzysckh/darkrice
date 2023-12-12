@@ -1,4 +1,50 @@
-!Xcursor.theme: whiteglass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Xcursor.theme: whiteglass
+
+
 
 xlogin*login.translations: #override \
 	Ctrl<Key>R: abort-display()\n\
@@ -13,71 +59,68 @@ xlogin*login.translations: #override \
 	Ctrl<Key>Return: set-session-argument(failsafe) finish-field()\n\
 	<Key>Return: set-session-argument() finish-field()
 
-xlogin.Login.background: #2b3339
-xlogin.Login.foreground: #d3c6aa
-xlogin.Login.greetColor: #d3c6aa
-xlogin.Login.inpColor: #2b3339
-xlogin.Login.promtColor: #2b3339
-xlogin.Login.hiColor: #d3c6aa
-xlogin.Login.shdColor: #d3c6aa
+xlogin*greeting: Welcome to CLIENTHOST
+xlogin*namePrompt: \040\040\040\040\040\040\040Login:
+xlogin*fail: Login incorrect or forbidden by policy
 
-xlogin*shdColor: #2b3339
-xlogin*hiColor: #504e4e
-xlogin*background: #2b3339
-xlogin*foreground: #d3c6aa
-xlogin*greetColor: #8cc080
-xlogin*failColor: #e67e80
-*Foreground: #d3c6aa
-*Background: #2b3339
+#if WIDTH > 800
+xlogin*greetFont: -adobe-helvetica-bold-o-normal--24-240-75-75-p-138-iso8859-1
+xlogin*font: -adobe-helvetica-medium-r-normal--18-180-75-75-p-98-iso8859-1
+xlogin*promptFont: -adobe-helvetica-bold-r-normal--18-180-75-75-p-103-iso8859-1
+xlogin*failFont: -adobe-helvetica-bold-r-normal--18-180-75-75-p-103-iso8859-1
+xlogin*greetFace:	Serif-24:bold:italic
+xlogin*face: 		Helvetica-18
+xlogin*promptFace: 	Helvetica-18:bold
+xlogin*failFace: 	Helvetica-18:bold
+#else
+xlogin*greetFont: -adobe-helvetica-bold-o-normal--17-120-100-100-p-92-iso8859-1
+xlogin*font: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+xlogin*promptFont: -adobe-helvetica-bold-r-normal--12-120-75-75-p-70-iso8859-1
+xlogin*failFont: -adobe-helvetica-bold-o-normal--14-140-75-75-p-82-iso8859-1
+xlogin*greetFace:	Serif-18:bold:italic
+xlogin*face:		Helvetica-12
+xlogin*promptFace:	Helvetica-12:bold
+xlogin*failFace:	Helvetica-14:bold
+#endif
 
+#ifdef COLOR
+xlogin*borderWidth: 1
+xlogin*frameWidth: 5
+xlogin*innerFramesWidth: 2
+xlogin*shdColor: grey30
+xlogin*hiColor: grey90
+xlogin*background: grey
+!xlogin*foreground: darkgreen
+xlogin*greetColor: Blue3
+xlogin*failColor: red
+*Foreground: black
+*Background: #fffff0
+#else
+xlogin*borderWidth: 3
+xlogin*frameWidth: 0
+xlogin*innerFramesWidth: 1
+xlogin*shdColor: black
+xlogin*hiColor: black
+#endif
+
+#if PLANES >= 8
+xlogin*logoFileName: /usr/share/X11/xdm/pixmaps/debian.xpm
+#else
+xlogin*logoFileName: /usr/share/X11/xdm/pixmaps/debianbw.xpm
+#endif
 xlogin*useShape: true
 xlogin*logoPadding: 10
-xlogin*greeting: CLIENTHOST
-xlogin*borderWidth: 0
-
-xlogin.Login.face: CozetteVector
-xlogin.Login.failFace: CozetteVector
-xlogin.Login.greetFace: CozetteVector
-xlogin.Login.promptFace: CozetteVector
-
-xlogin.Login.logoFileName: /usr/share/pixmaps/arch.xpm
-xlogin.Login.logoPadding: 8
-
-xlogin.Login.namePrompt: login
-xlogin.Login.passwdPrompt: password
-xlogin.Login.fail: lmao no
-xlogin.Login.echoPasswd: false
-
-xlogin.Login.Height: 300
-xlogin.Login.Width: 500
-xlogin.Login.x: 90
-xlogin.Login.y: 300
-xlogin.login.frameWidth: 0
-xlogin.login.innerFramesWidth: 1
-xlogin.login.sepWidth: 0
-
-! xclock !
-!xclock.face: CozetteVector
-!xclock.dateFace: CozetteVector
-! set in Xsetup_0
-xclock.dateGeom: +780+320
-xclock.background: #2b3339
-xclock.foreground: #d3c6aa
-xclock.borderWidth: 0
-xclock.Clock.analog: false
-xclock.Clock.chime: false
-xclock.Clock.render: true
-xclock.Clock.twentyfour: true
-xclock.Clock.update: 10
-
-! xmessage !
-xmessage*background: #2b3339
-xmessage*foreground: #d3c6aa
-xmessage*borderWidth: 0
-xmessage*face: CozetteVector
-xmessage*scrollHorizontal: Never
-xmessage*scrollVertical: Never
-xmessage*timeout: 0
 
 
+XConsole.text.geometry:	480x130
+XConsole.verbose:	true
+XConsole*iconic:	true
+XConsole*font:		fixed
 
+Chooser*geometry:		700x500+300+200
+Chooser*allowShellResize:	false
+Chooser*viewport.forceBars:	true
+Chooser*label.font:		*-new century schoolbook-bold-i-normal-*-240-*
+Chooser*label.label:		XDMCP Host Menu from CLIENTHOST
+Chooser*list.font:		-*-*-medium-r-normal-*-*-230-*-*-c-*-iso8859-1
+Chooser*Command.font:		*-new century schoolbook-bold-r-normal-*-180-*

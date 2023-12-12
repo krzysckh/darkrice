@@ -8,6 +8,7 @@ cls
 # some update of urxvt f'd something up with geometry in dwm
 # it's a "fix"
 
+. /etc/profile.d/bash_completion.sh
 alias pm="sudo make clean ; perl Makefile.PL ; sudo make install"
 alias lg=lazygit
 
