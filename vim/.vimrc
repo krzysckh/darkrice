@@ -88,7 +88,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-eunuch'
   Plug 'vim-scripts/transpose-words'
   Plug 'sillybun/vim-repl'
-  Plug 'othree/eregex.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarnpkg install --frozen-lockfile'}
 call plug#end()
 

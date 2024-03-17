@@ -2,11 +2,7 @@
 # written by krzych for krzych
 #
 # krzysckh.org
-# krzysckh 2021, 2022, 2023
-
-cls
-# some update of urxvt f'd something up with geometry in dwm
-# it's a "fix"
+# krzysckh 2021, 2022, 2023, 2024
 
 . /etc/profile.d/bash_completion.sh
 alias pm="sudo make clean ; perl Makefile.PL ; sudo make install"
@@ -24,7 +20,7 @@ PS2='> '
 
 export EDITOR='vim'
 export VISUAL='vim'
-export BROWSER='firefox'
+export BROWSER='firefox-esr'
 export TERMINAL='urxvt'
 export PAGER='less'
 
@@ -73,3 +69,11 @@ topdf() {
 export MAKESYSPATH=/usr/share/mk/
 
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+cls
+# some update of urxvt f'd something up with geometry in dwm
+# it's a "fix"
+
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
