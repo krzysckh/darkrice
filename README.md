@@ -25,8 +25,8 @@ yay -S rxvt-unicode-wide-glyphs
 - spotify
 - spicetify
 - dmenu
-- agave nerd font
-- figlet + 'speed' figlet font
+- ~~agave nerd font~~
+- lilex font
 - perl
 
 and you probably should look into [my scripts](https://github.com/krzysckh/bin)

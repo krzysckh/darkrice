@@ -1,18 +1,11 @@
 inputrc/* -> $HOME/ (optional)
-scripts/* -> $HOME/scripts/
 vim/* -> $HOME/
 discord/* -> (use beautifulDiscord; it's going to show you the path)
-bspwm/* -> $HOME/.config/bspwm/
-sxhkd/* -> $HOME/.config/sxhkd/
 spotify/* -> $HOME/.config/spicetify/
-bspwmbar/* ... git clone https://github.com/odknt/bspwmbar ; cd bspwmbar ; git am /path/to /bspwmbar.patch ; ./configure ; make ; sudo make install
 picom/* -> $HOME/.config/picom/
 Xresources/* -> $HOME/
 dunst/* -> $HOME/.config/dunst
 tmux/* -> $HOME
 bashrc/* -> $HOME
 res/* -> $HOME/res
-xdm/* -> /etc/X11/xdm
 xsession/* -> $HOME
-arch.xpm -> /usr/share/pixmaps/
-firefox/* -> $HOME/.mozilla/firefox/*/chrome/
