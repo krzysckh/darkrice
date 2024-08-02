@@ -29,6 +29,9 @@ URxvt*background:   [100]#2b3339
 URxvt*cursorColor:  #d3c6aa
 URxvt*borderColor:  [100]#2b3339
 
+#define fg #d3c6aa
+#define bg #2b3339
+
 *.color0: #2b3339
 *color0:  #2b3339
 *.color1: #e67e80
@@ -64,3 +67,10 @@ URxvt*borderColor:  [100]#2b3339
 
 *.color66: #2b3339
 *color66:  #2b3339
+
+pmenu.faceName:xft:Lilex:pixelsize=13:weight=medium, xft:DejaVu Sans Mono Nerd Font:pixelsize=13, xft:Noto Color Emoji:pixelsize=14
+pmenu.background: bg
+pmenu.foreground: fg
+pmenu.activeBackground: fg
+pmenu.activeForeground: bg
+pmenu.borderColor: #d699b6
